@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center">
+			<h2>Function Reference</h2>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/about_tmg_gui.html">about_tmg_gui</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/bisecting_nndsvd.html">bisecting_nndsvd</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/block_diagonalize.html">block_diagonalize</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/block_nndsvd.html">block_nndsvd</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/classification_gui.html">classification_gui</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/clean_filters.html">clean_filters</a>
+					</td>
+				</tr>
+				<tr>	
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/cleanup.html">cleanup</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/clsi.html">clsi</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/clustering_gui.html">clustering_gui</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/cm.html">cm</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/col_normalization.html">col_normalization</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/col_rearrange.html">col_rearrange</a>
+					</td>
+				</tr>												
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					
+					<td width="30%" align="left">
+						<a href="functions/column_norms.html">column_norms</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/compute_fro_norm.html">compute_fro_norm</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/compute_scat.html">compute_scat</a>					
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					
+					<td width="30%" align="left">
+						<a href="functions/create_kmeans_response.html">create_kmeans_response</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/create_pddp_response.html">create_pddp_response</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/create_retrieval_response.html">create_retrieval_response</a>	
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/diff_vector.html">diff_vector</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/doc2ascii.html">doc2ascii</a>	
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/dr_gui.html">dr_gui</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/ekmeans.html">ekmeans</a>					
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/entropy.html">entropy</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/get_node_scat.html">get_node_scat</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/gui.html">gui</a>				
+					</td>
+					<td width="30%" align="left">	
+						<a href="functions/init_tmg.html">init_tmg</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/knn_multi.html">knn_multi</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/knn_single.html">knn_single</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/ks_selection.html">ks_selection</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/ks_selection1.html">ks_selection1</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/llsf_multi.html">llsf_multi</a>						
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/llsf_single.html">llsf_single</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/lsa.html">lsa</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/make_clusters_multi.html">make_clusters_multi</a>						
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/make_clusters_single.html">make_clusters_single</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/make_labels.html">make_labels</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/make_val_inds.html">make_val_inds</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/merge_dictionary.html">merge_dictionary</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/merge_tdms.html">merge_tdms</a>
+					</td>
+				</tr>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/myperms.html">myperms</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/nnmf_gui.html">nnmf_gui</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/nnmf_mul_update.html">nnmf_mul_update</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/open_file.html">open_file</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/opt_2means.html">opt_2means</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pca.html">pca</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/pca_mat.html">pca_mat</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pca_mat_afun.html">pca_mat_afun</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pca_propack.html">pca_propack</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/pca_propack_Atransfunc.html">pca_propack_Atransfunc</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pca_propack_afun.html">pca_propack_afun</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pca_update.html">pca_update</a>
+					</td>
+				</tr>		
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/pca_update_afun.html">pca_update_afun</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pddp.html">pddp</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pddp_2means.html">pddp_2means</a>
+					</td>
+				</tr>		
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/pddp_extract_centroids.html">pddp_extract_centroids</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pddp_optcut.html">pddp_optcut</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/pddp_optcut_2means.html">pddp_optcut_2means</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/pddp_optcutpd.html">pddp_optcutpd</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/ps_pdf2ascii.html">ps_pdf2ascii</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/retrieval_gui.html">retrieval_gui</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/rocchio_multi.html">rocchio_multi</a>	
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/rocchio_single.html">rocchio_single</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/scut_knn.html">scut_knn</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/scut_llsf.html">scut_llsf</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/scut_rocchio.html">scut_rocchio</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/sdd_tmg.html">sdd_tmg</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/skmeans.html">skmeans</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/stemmer.html">stemmer</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/strip_html.html">strip_html</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/svd_tmg.html">svd_tmg</a>	
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/svd_update.html">svd_update</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/svd_update_afun.html">svd_update_afun</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/tdm_downdate.html">tdm_downdate</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/tdm_update.html">tdm_update</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/tmg.html">tmg</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/tmg_gui.html">tmg_gui</a>	
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/tmg_query.html">tmg_query</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/tmg_save_results.html">tmg_save_results</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/tmg_template.html">tmg_template</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/two_means_1d.html">two_means_1d</a>
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/unique_elements.html">unique_elements</a>
+					</td>
+				</tr>	
+				<tr>
+					<td width="10%" align="left">&nbsp;</td>
+					<td width="30%" align="left">
+						<a href="functions/unique_words.html">unique_words</a>	
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/untex.html">untex</a>	
+					</td>
+					<td width="30%" align="left">
+						<a href="functions/vsm.html">vsm</a>
+					</td>
+					
+				</tr>					
+			</table>										
+    	</td>
+    </tr>
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

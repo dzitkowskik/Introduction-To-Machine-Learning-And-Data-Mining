@@ -1,0 +1,1767 @@
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 14:54:06...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.057501 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.498256 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 14:54:22...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.021207 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.199263 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 14:54:33...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.032240 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.289087 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 14:54:59...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.038092 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.347639 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 14:55:15...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.022815 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.178046 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:02:45...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.139884 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.496178 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:03:11...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.030563 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.306238 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:04:55...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.244278 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.841877 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:08:42...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.032402 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.292072 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:09:15...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.139142 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.406273 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:10:40...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.172797 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.418930 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:12:10...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.212321 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.544839 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:34:49...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 1.819764 seconds
+Estimated time for constructing tdm and the other workspace parts: 2.377028 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:38:38...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.156025 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.467905 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 15:41:00...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:14:05...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:16:51...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 18
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 4.4
+Sparsity = 24.4444%
+
+Estimated time for parsing and converting the files: 0.023819 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.201301 seconds 
+
+Removed 17 stopwords...
+Removed 2 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:17:56...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:17:56...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:17:56...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:21:49...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:21:49...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:21:49...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:24:48...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:24:48...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 08-Jul-2014 16:24:49...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 09-Jul-2014 15:22:58...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 09-Jul-2014 15:22:59...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 09-Jul-2014 15:22:59...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 13:46:21...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 13:46:21...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 13:46:21...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 13:51:34...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 13:51:35...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 13:51:35...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:28:49...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:28:50...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:28:51...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:31:30...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:31:30...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:31:31...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:50:19...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:50:19...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 14:50:20...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 15:54:13...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 15:54:14...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 10-Jul-2014 15:54:15...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 10:06:23...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 10:06:24...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 10:06:24...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 11:36:46...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 11:36:47...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 11:36:47...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 12:59:27...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 12:59:28...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 12:59:28...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 13:03:28...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 13:03:28...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 20-Jul-2014 13:03:28...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 12:06:20...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 12:06:21...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 12:06:22...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 12:51:52...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 12:51:52...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 12:51:53...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 13:26:17...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 13:26:17...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 13:26:17...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 14:09:47...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 14:09:47...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 21-Jul-2014 14:09:48...
+Using the Perl implementation...
+Input File/Directory: 			C:\Users\hh.lpf\Dropbox\Exercises\02450Toolbox_Matlab\Scripts\..\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			..\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no==================================================================================================================================================================
+Running tmg (tmg_p.m) on 09-Sep-2014 16:19:50...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 5
+Number of terms = 25
+Average number of terms per document (before the normalization) = 11
+Average number of indexing terms per document = 6.8
+Sparsity = 25.6%
+
+Estimated time for parsing and converting the files: 0.070448 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.441700 seconds 
+
+Removed 12 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 09-Sep-2014 16:31:50...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 91
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 29.7143
+Sparsity = 19.1523%
+
+Estimated time for parsing and converting the files: 0.005618 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.099343 seconds 
+
+Removed 17 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 15-Sep-2014 20:51:41...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 91
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 29.7143
+Sparsity = 19.1523%
+
+Estimated time for parsing and converting the files: 0.066553 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.446926 seconds 
+
+Removed 17 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================

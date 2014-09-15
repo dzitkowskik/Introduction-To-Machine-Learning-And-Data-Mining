@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<p align="justify">
+				Text to Matrix Generator (TMG) is a MATLAB Toolbox that can be used for various 
+				Data Mining (DM) and Information Retrieval (IR) tasks. TMG uses the sparse 
+				matrix infrastracture of MATLAB that is especially suited for Text Mining (TM) applications 
+				where data are extremely sparse. Initially built as a preprocessing tool, 
+				TMG offers now a wide range of DM tools. In particular, TMG is composed of 
+				six Graphical User Interface (GUI) modules, presented in Figure 1 (arrows 
+				show modules dependencies).
+			</p>
+			<p align="center">
+				<img src="images/tmg.jpg" width="565" height="229" /><br />
+				<strong>Figure 1:</strong> Structure and dependencies of GUI modules of TMG.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2>Installation</h2>
+			<p align="justify">
+				Installation of TMG is straightforward by means of the init_tmg script. In 
+				particular, the user has to perform the following steps:
+			</p>			
+			<ul>
+				<li> 
+					<p align="justify">
+						For MySQL functionality, install MySQL and Java Connector.
+					</p> 
+				</li> 
+				<li> 
+					<p align="justify">
+						Download TMG by filling the form from: 
+					</p>
+					<p align="center">
+						<a href="http://scgroup20.ceid.upatras.gr:8000/tmg/index.php?option=com_content&view=article&id=118&Itemid=14">
+							http://scgroup20.ceid.upatras.gr:8000/tmg/index.php?option=com_content&view=article&id=118&Itemid=14
+						</a>
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Unzip TMG_X.XRX.zip and start MATLAB. Figure 2 depicts the directory structure 
+						of the TMG root directory.
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Change path to the TMG root directory.
+					</p> 
+				</li>
+				<li>
+					<p align="justify">
+						Run init_tmg. Give the MySQL login and password as well as the root directory 
+						of the MySQL Java Connector. The installation script creates all necessary 
+						information (including MySQL database tmg) and adds to the MATLAB path all 
+						necessary directories.
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Run gui. Alternatively, use the command line interface, type "help tmg".
+					</p> 
+				</li>  
+			</ul>
+			<p align="justify">
+				TMG 6.0R7 requires the following third party software packages: 
+			</p>
+			<ul>
+				<li>
+					<p align="justify">
+						MySQL: <a href="http://www.mysql.com/">http://www.mysql.com/</a>,  
+						<a href="http://dev.mysql.com/downloads/connector/j/5.0.html">http://dev.mysql.com/downloads/connector/j/5.0.html</a>
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						JRE: <a href="http://www.java.com/en/download/index.jsp">http://www.java.com/en/download/index.jsp</a>
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						ANLS: <a href="http://compbio.med.harvard.edu/hkim/nmf/index.html">http://compbio.med.harvard.edu/hkim/nmf/index.html</a>
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						NNDSVD: <a href="http://www.cs.rpi.edu/~boutsc/paper1.html">http://www.cs.rpi.edu/~boutsc/paper1.html</a>
+					</p>
+				</li>																												
+				<li>
+					<p align="justify">
+						PROPACK: <a href="http://soi.stanford.edu/~rmunk/PROPACK/index.html">http://soi.stanford.edu/~rmunk/PROPACK/index.html</a>
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						SDDPACK: <a href="http://www.cs.umd.edu/~oleary/SDDPACK/README.html">http://www.cs.umd.edu/~oleary/SDDPACK/README.html</a>
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						SPQR: <a href="http://portal.acm.org/citation.cfm?id=1067972">http://portal.acm.org/citation.cfm?id=1067972</a>
+					</p>
+				</li>
+			
+				
+			</ul>
+			<p align="justify">
+				ANLS, NNDSVD, PROPACK, SDDPACK and SPQR packages are included into TMG, while the user has 
+				to download MySQL and JRE. However, we note that MySQL related software is necessary 
+				only if the user intends to use the database support utilized by TMG. 
+				Ordinary TMG will run without any problem on a Matlab 7.0 environment without 
+				any other special software.
+			</p>				
+			<p align="center">
+				<img src="images/tmg_dir_structure.jpg" width="517" height="669" /><br />
+				<strong>Figure 2:</strong> Structure of TMG root directory.				
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2>Indexing Module (tmg_gui)</h2>
+			<p align="justify">
+				TMG can be used for the construction of new and the update of existing term-document 
+				matrices (tdms) from text collections, in the form of MATLAB sparse arrays. To this 
+				end, TMG implements various steps such as: 
+			</p>
+			<ul>
+				<li>
+					<p align="justify">
+						Removal of stopwords.
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Stemming (currently Porter stemming algorithm [11]).
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Removal of alphanumeric terms (optionally).
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Removal of numeric terms (optionally).
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Removal of short/long terms.
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Removal of frequent/infrequent terms (locally or globally). 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Term weighting and normalization.
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Html filtering, processing of Postscript, PDF, Microsoft Office Documents (doc,docx,rtf), Open
+						Office Documents (odt) and Latex Documents (tex).
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Store in MySQL (optionally).
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Selective Parsing of Subdirectories.
+					</p>
+				</li>
+			</ul>
+			<p align="justify">
+				The resulting tdms can be stored as "mat" files, while text can also be stored 
+				to MySQL for further procesing. TMG can also update existing tdms by efficient 
+				incremental updating or downdating operations. Finally, TMG can also construct 
+				query vectors using the existing dictionary that can be used by the retrieval 
+				and classification modules.
+			</p>
+			<p align="center">
+				<img src="images/tmg_new_gui.jpg" width="604" height="598" /><br />
+				<strong>Figure 3:</strong> tmg_gui.				
+			</p>			
+			<p align="justify">
+				See <a href="indexing.html">details</a> and a <a href="indexing1.html">demostration</a> of tmg_gui.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2>Dimensionality Reduction module (dr_gui)</h2>
+			<p align="justify">
+				This module deploys a variety of powerful techniques designed to efficiently handle 
+				high dimensional data. Dimensionality Reduction (DR) is a common technique that 
+				is widely used. The target is dual: (a) more economical representation of data, 
+				and (b) better semantic representation. TMG implements six DR techniques.  
+			</p>
+			<ul>
+				<li>
+					<p align="justify">
+						Singular Value Decomposition (SVD).
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Principal Component Analysis (PCA). 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Clustered Latent Semantic Indexing (CLSI) [16, 17]. 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Centroids Method (CM) [10].  
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Semidiscrete Decomposition (SDD) [8]. 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						SPQR Decomposition [2]. 
+					</p>
+				</li>
+			</ul>
+			<p align="justify">
+				DR data can be stored as "mat" files and used for further processing.
+			</p>
+			<p align="center">
+				<img src="images/dr_gui.jpg" width="604" height="598" /><br />
+				<strong>Figure 4:</strong> dr_gui.				
+			</p>			
+			<p align="justify">
+				See <a href="dr.html">details</a> and a <a href="dr1.html">demostration</a> of dr_gui.
+			</p>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<h2>Non-Negative Factorizations module (nnmf_gui)</h2>
+			<p align="justify">
+				This module deploys a set of Non-Negative Matrix Factorization (NNMF) techniques. 
+				Since these techniques are iterative, the final result depends on the initialization. 
+				A common approach is the random initialization of the non-negative factors, however 
+				new approaches appear to result in higher quality approximations. TMG implements four 
+				initialization techniques:
+			</p>
+			<ul>   
+				<li>
+					<p align="justify">
+						Non-Negative Double Singular Value Decomposition (NNDSVD) [4]. 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Block NNDSVD [20]. 
+					</p>
+				</li>				
+				<li>
+					<p align="justify">
+						Bisecting NNDSVD [20]. 
+					</p>
+				</li>				  	
+				<li>
+					<p align="justify">
+						By clustering [12]. 
+					</p>
+				</li>		
+			</ul>
+			<p align="justify">
+				Resulting factors can be further refined by means of two NNMF algorithms:  
+			</p>
+			<ul>   
+				<li>
+					<p align="justify">
+						Multiplicative Update algorithm by Lee and Seung [9]. 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Alternating Non-negativity-constrained Least Squares (NMF/ANLS) [7]. 
+					</p>
+				</li>				
+			</ul>			
+			<p align="center">
+				<img src="images/nnmf_gui.jpg" width="604" height="598" /><br />
+				<strong>Figure 7:</strong> nnmf_gui.				
+			</p>			
+			<p align="justify">
+				See <a href="nnmf.html">details</a> and a <a href="nnmf1.html">demostration</a> of nnmf_gui.
+			</p>
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			<h2>Retrieval module (retrieval_gui)</h2>
+			<p align="justify">
+				TMG offers two alternatives for Text Mining.   
+			</p>
+			<ul>
+				<li>
+					<p align="justify">
+						Vector Space Model (VSM) [12].
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Latent Semantic Analysis (LSA) [1, 5],  
+					</p>
+				</li>
+			</ul>
+			<p align="justify">
+				using a combination of any DR technique and Latent Semantic Indexing (LSI). 
+				Using the corresponding GUI, the user can apply a question to an existing dataset 
+				using any of the aforementioned techniques and get HTML response.
+			</p>
+			<p align="center">
+				<img src="images/retrieval_gui.jpg" width="604" height="598" /><br />
+				<strong>Figure 5:</strong> retrieval_gui.				
+			</p>			
+			<p align="justify">
+				See <a href="retrieval.html">details</a> and a <a href="retrieval1.html">demostration</a> of retrieval_gui.
+			</p>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<h2>Clustering module (clustering_gui)</h2>
+			<p align="justify">
+				TMG implements three clustering algorithms.    
+			</p>
+			<ul>
+				<li>
+					<p align="justify">
+						k-means. 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Spherical k-means [6].   
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Principal Direction Divisive Partitioning (PDDP) [3,15]. 
+					</p>
+				</li>				
+			</ul>
+			<p align="justify">
+				Regarding PDDP, TMG implements the basic algorithm as well as the PDDP(l) [15] 
+				and some hybrid variants of PDDP and kmeans [19].
+			</p>
+			<p align="center">
+				<img src="images/clustering_gui.jpg" width="604" height="598" /><br />
+				<strong>Figure 6:</strong> clustering_gui.				
+			</p>			
+			<p align="justify">
+				See <a href="clustering.html">details</a> and a <a href="clustering1.html">demostration</a> of clustering_gui.
+			</p>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<h2>Classification module (classification_gui)</h2>
+			<p align="justify">
+				TMG implements three classification algorithms.     
+			</p>
+			<ul>
+				<li>
+					<p align="justify">
+						k-Nearest Neighboors (kNN). 
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Rocchio.    
+					</p>
+				</li>
+				<li>
+					<p align="justify">
+						Linear Least Squares Fit (LLSF) [14].  
+					</p>
+				</li>				
+			</ul>
+			<p align="justify">
+				All these algorithms can be combined with CLSI, CM and SVD DR techniques.
+			</p>
+			<p align="center">
+				<img src="images/classification_gui.jpg" width="604" height="598" /><br />
+				<strong>Figure 7:</strong> classification_gui.				
+			</p>			
+			<p align="justify">
+				See <a href="classification.html">details</a> and a <a href="classification1.html">demostration</a> of classification_gui.
+			</p>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<h2>Acknowledgements</h2>
+			<p align="justify">
+				 TMG was conceived after a motivating discussion with Andrew Knyazev regarding 
+				 a collection of MATLAB tools we had put together to aid in our clustering 
+				 experiments. We thank our collegues Ioannis Antonellis, Anastasios Zouzias, 
+				 Efi Kokiopoulou and Constantine Bekas for many helpful suggestions, Jacob 
+				 Kogan and Charles Nicholas for inviting us to contribute to [18], Elias 
+				 Houstis for his help in the initial phases of this research and Michael Berry, 
+				 Tamara Kolda Rasmus Munk Larsen, Christos Boutsidis and Haesun Park for letting us use and distribute SPQR, 
+				 SDDPACK, PROPACK, NNDSVD and ANLS software respectively. Special thanks are due to many of 
+				 the users for their constructive comments regarding TMG. This research was 
+				 supported in part by a University of Patras "Karatheodori" grant. The 
+				 first author was also supported by a Bodossaki Foundation graduate 
+				 fellowship.     
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2>References</h2>
+			<p align="justify">
+				[1] M. Berry, Z. Drmac, and E. Jessup, Matrices, vector spaces, and information retrieval, SIAM Review 41 (1998), 335–362.<br /><br />
+
+				[2] M. W. Berry, S. A. Pulatova, and G. W. Stewart, Computing sparse reduced-rank approximations to sparse matrices, ACM TOMS 31 (2005), no. 2.<br /><br />
+
+				[3] D. Boley, Principal direction divisive partitioning, Data Mining and Knowledge Discovery 2 (1998), no. 4, 325–344.<br /><br />
+				
+				[4] C. Boutsidis and E. Gallopoulos, SVD-based initialization: A head start on nonnegative matrix factorization, Pattern Recognition, Volume 41, Issue 4, Pages 1350-1362, April 2008.<br /><br />
+				
+				[5] S. Deerwester, S. Dumais, G. Furnas, T. Landauer, and Harshman R., Indexing by Latent Semantic Analysis, Journal of the American Society for Information Science 41 (1990), no. 6, 391–407.<br /><br />
+				
+				[6] I. S. Dhillon and D. S. Modha, Concept decompositions for large sparse text data using clustering, Machine Learning 42 (2001), no. 1, 143–175.<br /><br />
+				
+				[7] H. Kim and H. Park, Non-negative matrix factorization based on alternating non-negativity-constrained least squares and the active set method, SIAM Journal of Matrix Analysis and Applications, to appear, 2008.<br /><br />
+				
+				[8] T. Kolda and D. O’Leary, Algorithm 805: computation and uses of the semidiscrete matrix decomposition, ACM TOMS 26 (2000), no. 3.<br /><br />
+				
+				[9] D. Lee, S. Seung, Algorithms for Non-negative Matrix Factorization, NIPS (2000), 556-562.<br /><br/>
+				
+				[10] H. Park, M. Jeon, and J. Rosen, Lower dimensional representation of text data based on centroids and least squares, BIT 43 (2003).<br /><br />
+				
+				[11] M.F. Porter, An algorithm for suffix stripping, Program (1980), no. 3, 130–137.<br /><br />
+				
+				[12] G. Salton, C. Yang, and A. Wong, A Vector-Space Model for Automatic Indexing, Communications of the ACM 18 (1975), no. 11, 613–620.<br /><br />
+				
+				[13] S. Wild, J. Curry, and A. Dougherty, Improving non-negative matrix factorizations through structured initializations, Pattern Recognition, 37:2217-2232, 2004. <br /><br />
+				
+				[14] Y. Yang and C. Chute, A linear least squares fit mapping method for information retrieval from natural language texts, In 14th Conf. Comp. Linguistics, 1992.<br /><br />
+				
+				[15] D. Zeimpekis and E. Gallopoulos, PDDP(l): Towards a Flexing Principal Direction Divisive Partitioning Clustering Algorithms, Proc. IEEE ICDM ’03 Workshop on Clustering Large Data Sets (Melbourne, Florida) (D. Boley, I. Dhillon, J. Ghosh, and J. Kogan, eds.), 2003, pp. 26–35.<br /><br />
+				
+				[16] D. Zeimpekis and E. Gallopoulos, CLSI: A flexible approximation scheme from clustered term-document matrices, In Proc. SIAM 2005 Data Mining Conf. (Newport Beach, California) (H. Kargupta, J. Srivastava, C. Kamath, and A. Goodman, eds.), April 2005, pp. 631–635.<br /><br />
+				
+				[17] D. Zeimpekis and E. Gallopoulos, Linear and non-linear dimensional reduction via class representatives for text classification, In Proc. of the 2006 IEEE International Conference on DataMining (Hong Kong), December 2006, pp. 1172–1177.<br /><br />
+				
+				[18] D. Zeimpekis and E. Gallopoulos, TMG: A MATLAB toolbox for generating term document matrices from text collections, Grouping Multidimensional Data: Recent Advances in Clustering (J. Kogan, C. Nicholas, and M. Teboulle, eds.), Springer, Berlin, 2006, pp. 187–210.<br /><br />
+				
+				[19] D. Zeimpekis and E. Gallopoulos, k-means steering of spectral divisive clustering algorithms, In Proc. of Text Mining Workshop (Minneapolis), 2007.<br /><br />
+				
+				[20] D. Zeimpekis and E. Gallopoulos, Document Clustering using NMF based on Spectral Information. In Proc. Text Mining Workshop 2008 held in conjunction with the 8th SIAM International Conference on Data Mining, Atlanta, 2008.<br /><br />
+			</p>
+		</td>
+	</tr>			
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

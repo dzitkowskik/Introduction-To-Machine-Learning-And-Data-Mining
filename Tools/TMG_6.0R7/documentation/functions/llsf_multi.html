@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<div class="content">
+				<pre class="codeinput">
+					<span class="comment">
+  LLSF_MULTI - Linear Least Squares Fit for multi-label 
+  collections [2]
+    LABELS_AS=LLSF_MULTI(A, Q, CLUSTERS, LABELS, L, METHOD, 
+    THRESHOLDS, SVD_METHOD, CLSI_METHOD) classifies the 
+    columns of Q with the Linear Least Squares Fit classifier 
+    [2] using the pre-classified columns of matrix A with 
+    labels LABELS (cell array of vectors of integers). 
+    THRESHOLDS is a vector of class threshold values, while 
+    CLUSTERS is a structure defining the classes. METHOD 
+    is the method used for the approximation of the rank-l 
+    truncated SVD, with possible values:
+        - 'clsi': Clustered Latent Semantic Indexing [3].
+        - 'cm': Centroids Method [1].
+        - 'svd': Singular Value Decomosition.
+    SVD_METHOD defines the method used for the computation 
+    of the SVD, while CLSI_METHOD defines the method used 
+    for the determination of the number of factors from each 
+    class used in Clustered Latent Semantic Indexing in case 
+    METHOD equals 'clsi'. 
+ 
+    REFERENCES:
+    [1] H. Park, M. Jeon, and J. Rosen. Lower Dimensional 
+    Representation of Text Data Based on Centroids and Least 
+    Squares. BIT Numerical Mathematics, 43(2):427–448, 2003.
+    [2] Y. Yang and C. Chute. A Linear Least Squares Fit 
+    Mapping Method for Information Retrieval from Natural 
+    Language Texts. In Proc. 14th Conference on Computational 
+    Linguistics, pages 447–453, Morristown, NJ, USA, 1992. 
+    [3] D. Zeimpekis and E. Gallopoulos, "Linear and 
+    Non-Linear Dimensional Reduction via Class Representatives 
+    for Text Classification".  In Proc. 2006 IEEE International 
+    Conference on Data Mining (ICDM'06), Hong Kong, Dec. 2006.  
+ 
+  Copyright 2011 Dimitrios Zeimpekis, Eugenia Maria Kontopoulou, 
+                 Efstratios Gallopoulos
+					</span>
+				</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="../intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>		
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

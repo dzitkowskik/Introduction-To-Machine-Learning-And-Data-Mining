@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center">
+			<h2>Classification Module (tmg_gui)</h2>
+			<p align="center">
+				<img src="images/classification_gui.jpg" width="604" height="598" /><br />
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="justify">
+				 classification_gui is a graphical user interface for "Text to Matrix Generator" that can be 
+				 used for applying a set of classification algorithms to term-document 
+				 matrices (TDM's) constructed from tmg_gui.
+			</p>
+			<p align="justify">
+				 See a <a href="classification1.html">demonstration</a> of classification_gui.
+			</p>
+			<p align="justify">
+				For complete up-to-date documentation visit the TMG Wiki: 
+			</p>
+			<p align="center">
+				<a href="http://scgroup6.ceid.upatras.gr:8000/wiki/">
+					http://scgroup6.ceid.upatras.gr:8000/wiki/
+				</a> 
+			</p>			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table align="left" width="100%" border="2" cellpadding="2" cellspacing="2">
+				<tr>
+					<td align="center">
+						<strong>Field Name</strong>
+					</td>
+					<td align="center">
+						<strong>Default</strong>
+					</td>
+					<td align="center">
+						<strong>Description</strong>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Training Dataset
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						The training dataset.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Training Labels
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 The labels of the training dataset.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Use Stored Labels
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Check to use the stored vector of labels of training documents in the container folder.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Insert query
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						The test document(s).
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Single doc. (string)
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Check if a single test document is to be inserted.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Multiple docs (file)
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						  Check if multiple test document are to be inserted.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Filename
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 In 'Multiple docs (file)' is checked, insert the filename containing the test documents. 
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Delimiter
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 In 'Multiple docs (file)' is checked, insert the delimiter o be used for the test documents. 
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Line Delimiter
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 In 'Multiple docs (file)' is checked, check if delimiter of test documents' file takes a whole line of text.  
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Alternative Global Weights
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Global weights vector used for the construction of the test documents' vectors.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						 Use Stored Global Weights
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Use the global weights vector found on the container directory of the training dataset.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Stoplist
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Use a stoplist.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Local Term Weighting
+					</td>
+					<td align="center">
+						Term Frequency
+					</td>
+					<td align="left">
+						The local term weighting to be used.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						k-Nearest Neighboors (kNN)
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Check if the kNN classifier is to be applied. 
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Num. of NNs
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Number of Nearest Neighboors in kNN classifier. 
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Rocchio
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Check if Rocchio classifier is to be applied.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Weight of Positive Examples
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						The weight of the positive examples in the formation of the centroids vectors in Rocchio.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Weight of Negative Examples
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						The weight of the negative examples in the formation of the centroids vectors in Rocchio.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Linear Least Squares Fit (LLSF)
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Check if LLSF classifier is to be applied.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Number of Factors
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Number of factors used in the course of LLSF.
+					</td>
+				</tr>			
+				<tr>
+					<td align="left">
+						Multi-Label
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Check if classifier is to be applied for a multi-label collection.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Single-Label
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Check is classifier is to be applied for a single-label collection.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Use Thresholds
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 If 'Multi-Label' radio button is checked, use a stored vector of thresholds.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Compute Thresholds
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						  If 'Multi-Label' radio button is checked, compute thresholds.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Thresholds
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 If 'Multi-Label' and 'Use Thresholds' radio buttons are checked, supply a stored vector of thresholds.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Min. F-value
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						If 'Multi-Label' and 'Compute Thresholds' radio buttons are checked, supply minimum F1 value used in the thresholding algorithm.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						 Vector Space Model
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Use the basic Vector Space Model.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Preprocessing by
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Use preprocessed training data with: 'Singular Value Decomposition', 'Principal Component Analysis', 'Clusteredd Latent Semantic Analysis', 'Centroid Mathod', 'Semidiscrete Decomposition', 'SPQR'.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Number of Factors
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Number of factors for preprocessed training data.
+					</td>
+				</tr>		
+				<tr>
+					<td align="left">
+						Similarity Measure
+					</td>
+					<td align="center">
+						Cosine
+					</td>
+					<td align="left">
+						 The similarity measure to be used. 
+					</td>
+				</tr>																																																	
+				<tr>
+					<td align="left">
+						Continue
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Apply the selected operation.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Reset
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Reset window to default values.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Exit
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Exit window.
+					</td>
+				</tr>								
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>	
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<div class="content">
+				<pre class="codeinput">
+					<span class="comment">
+  SCUT_LLSF - implements the Scut thresholding technique from [2] 
+  for the Linear Least Squares Fit classifier [3]
+    THRESHOLD=SCUT_LLSF(A, Q, CLUSTERS, K, LABELS_TR, LABELS_TE, 
+    MINF1, L, METHOD, STEPS, SVD_METHOD, CLSI_METHOD) returns 
+    the vector of thresholds for the Linear Least Squares Fit 
+    classifier for the collection [A Q]. A and Q define the 
+    training and test parts of the validation set with labels 
+    LABELS_TR and LABELS_TE respectively. CLUSTERS is  a 
+    structure defining the classes, while MINF1 defines the 
+    minimum F1 value and STEPS defines the number of steps 
+    used during thresholding. 
+    METHOD is the method used for the approximation of the 
+    rank-l truncated SVD, with possible values:
+        - 'clsi': Clustered Latent Semantic Indexing [4].
+        - 'cm': Centroids Method [1].
+        - 'svd': Singular Value Decomosition.
+    SVD_METHOD defines the method used for the computation of 
+    the SVD, while CLSI_METHOD defines the method used for the 
+    determination of the number of factors from each class used 
+    in Clustered Latent Semantic Indexing in case METHOD equals 
+    'clsi'. 
+    [THRESHOLD, F, THRESHOLDS]=SCUT_LLSF(A, Q, CLUSTERS, K, 
+    LABELS_TR, LABELS_TE, MINF1, L, METHOD, STEPS, SVD_METHOD, 
+    CLSI_METHOD) returns also the best F1 value as well as the 
+    matrix of thresholds for each step (row i corresponds to 
+    step i).
+ 
+    REFERENCES:
+    [1] H. Park, M. Jeon, and J. Rosen. Lower Dimensional 
+    Representation of Text Data Based on Centroids and Least 
+    Squares. BIT Numerical Mathematics, 43(2):427–448, 2003.
+    [2] Y. Yang. A Study of Thresholding Strategies for Text 
+    Categorization. In Proc. 24th ACM SIGIR, pages 137–145, 
+    New York, NY, USA, 2001. ACM Press.
+    [3] Y. Yang and C. Chute. A Linear Least Squares Fit 
+    Mapping Method for Information Retrieval from Natural 
+    Language Texts. In Proc. 14th Conference on Computational 
+    Linguistics, pages 447–453, Morristown, NJ, USA, 1992. 
+    [4] D. Zeimpekis and E. Gallopoulos, "Non-Linear Dimensional 
+    Reduction via Class Representatives for Text Classification".  
+    In Proc. 2006 IEEE International Conference on Data Mining 
+    (ICDM'06), Hong Kong, Dec. 2006.
+ 
+   Copyright 2011 Dimitrios Zeimpekis, Eugenia Maria Kontopoulou, 
+                  Efstratios Gallopoulos
+					</span>
+				</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="../intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>		
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

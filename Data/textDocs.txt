@@ -1,0 +1,40 @@
+The Google matrix P is a model of the internet.
+
+P_ij is nonzero if there is a link from webpage i to j.
+
+The Google matrix is used to rank all Web pages.
+
+The ranking is done by solving a matrix eigenvalue problem.
+
+England dropped out of the top 10 in the FIFA ranking.
+
+tmg - Text to Matrix Generator 
+  tmg parses a text collection and generates the term - 
+  document matrix.
+  A = tmg(FILENAME) returns the term - document matrix, 
+  that corresponds to the text collection contained in 
+  files of directory (or file) FILENAME. 
+  Each document must be separeted by a blank line (or 
+  another delimiter that is defined by OPTIONS argument) 
+  in each file. 
+  [A, DICTIONARY] = tmg(FILENAME) returns also the 
+  dictionary for the collection, while [A, DICTIONARY, 
+  GLOBAL_WEIGHTS, NORMALIZED_FACTORS] = tmg(FILENAME) 
+  returns the vectors of global weights for the dictionary 
+  and the normalization factor for each document in case 
+  such a factor is used. If normalization is not used tmg 
+  returns a vector of all ones. 
+
+  [A, DICTIONARY, GLOBAL_WEIGHTS, NORMALIZATION_FACTORS, 
+  WORDS_PER_DOC] = tmg(FILENAME) returns statistics for 
+  each document, i.e. the number of terms for each document. 
+  [A, DICTIONARY, GLOBAL_WEIGHTS, NORMALIZATION_FACTORS, 
+  WORDS_PER_DOC, TITLES, FILES] = tmg(FILENAME) returns in 
+  FILES the filenames contained in directory (or file) 
+  FILENAME and a cell array (TITLES) that containes a 
+  declaratory title for each document, as well as the 
+  document's first line. Finally [A, DICTIONARY, 
+  GLOBAL_WEIGHTS, NORMALIZATION_FACTORS, WORDS_PER_DOC, 
+  TITLES, FILES, UPDATE_STRUCT] = tmg(FILENAME) returns a 
+  structure that keeps the essential information for the 
+  collection' s update (or downdate).

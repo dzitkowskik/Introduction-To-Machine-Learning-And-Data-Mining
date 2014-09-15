@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<div class="content">
+				<pre class="codeinput">
+					<span class="comment">
+  PDDP - Principal Direction Divisive Partitioning Clustering 
+  Algorithm 
+    PDDP clusters a term-document matrix (tdm) using the 
+    Principal Direction Divisive Partitioning clustering 
+    algorithm [1, 2]. 
+    CLUSTERS=PDDP(A, K, L) returns a cluster structure with 
+    K clusters for the tdm A formed using information from 
+    the first L principal components of the tdm. 
+    [CLUSTERS, TREE_STRUCT]=PDDP(A, K, L) returns also the 
+    full PDDP tree, while [CLUSTERS, TREE_STRUCT, S]=PDDP(A, 
+    K, L) returns the objective function of PDDP. 
+    PDDP(A, K, L, SVD_METHOD) defines the method used for the 
+    computation of the PCA (svds - default - or propack), while 
+    PDDP(A, K, L, SVD_METHOD, DSP) defines if results are to be 
+    displayed to the command window (default 1) or not (0). 
+ 
+    REFERENCES: 
+    [1] D.Boley, Principal Direction Divisive Partitioning, Data 
+    Mining and Knowledge Discovery 2 (1998), no. 4, 325-344.
+    [2] D.Zeimpekis, E.Gallopoulos, PDDP(l): Towards a Flexible 
+    Principal Direction Divisive Partitioning Clustering 
+    Algorithmm, Proc. IEEE ICDM'03 Workshop on Clustering Large 
+    Data Sets (Melbourne, Florida), 2003. 
+ 
+  Copyright 2008 Dimitrios Zeimpekis, Efstratios Gallopoulos
+					</span>
+				</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="../intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>		
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

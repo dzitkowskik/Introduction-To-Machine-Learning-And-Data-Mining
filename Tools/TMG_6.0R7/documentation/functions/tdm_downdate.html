@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<div class="content">
+				<pre class="codeinput">
+					<span class="comment">
+  TDM_DOWNDATE - renews a text collection by downdating the 
+  correspoding term-document matrix
+    A = TDM_DOWNDATE(UPDATE_STRUCT, REMOVED_DOCS) returns the new 
+    term - document matrix of the downdated collection. 
+    UPDATE_STRUCT defines the update structure returned by TMG, 
+    while REMOVED_DOCS defines the indices of the documents that 
+    is to be be removed. 
+    [A, DICTIONARY] = TDM_DOWNDATE(UPDATE_STRUCT, REMOVED_DOCS) 
+    returns also the dictionary for the updated collection, while 
+    [A, DICTIONARY, GLOBAL_WEIGHTS, NORMALIZED_FACTORS]
+    = TDM_DOWNDATE(UPDATE_STRUCT, REMOVED_DOCS) returns the 
+    vectors of  global weights for the dictionary and the 
+    normalization factor for each document in case such a factor 
+    is used. If normalization is not used TDM_DOWNDATE returns a 
+    vector of all ones. [A, DICTIONARY, GLOBAL_WEIGHTS, 
+    NORMALIZATION_FACTORS, WORDS_PER_DOC] = 
+    TDM_DOWNDATE(UPDATE_STRUCT, REMOVED_DOCS) returns statistics 
+    for each document, i.e. the number of terms for each document. 
+    [A, DICTIONARY, GLOBAL_WEIGHTS, NORMALIZATION_FACTORS, 
+    WORDS_PER_DOC, TITLES, FILES] = TDM_DOWNDATE(UPDATE_STRUCT, 
+    REMOVED_DOCS) returns in FILES the filenames containing the 
+    collection's documents and a cell array (TITLES) that contains 
+    a declaratory title for each document, as well as the document's 
+    first line. 
+    Finally [A, DICTIONARY, GLOBAL_WEIGHTS, NORMALIZATION_FACTORS, 
+    WORDS_PER_DOC, TITLES, FILES, UPDATE_STRUCT] = 
+    TDM_DOWNDATE(UPDATE_STRUCT, REMOVED_DOCS) returns the update 
+    structure that keeps the essential information for the 
+    collection' s update (or downdate).
+    TDM_DOWNDATE(UPDATE_STRUCT, REMOVED_DOCS, OPTIONS) defines 
+    optional parameters: 
+        - OPTIONS.dsp: Displays results (default 1) or not (0) 
+          to the command window.
+ 
+  Copyright 2011 Dimitrios Zeimpekis, Eugenia Maria Kontopoulou, 
+                 Efstratios Gallopoulos
+					</span>
+				</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="../intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>		
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

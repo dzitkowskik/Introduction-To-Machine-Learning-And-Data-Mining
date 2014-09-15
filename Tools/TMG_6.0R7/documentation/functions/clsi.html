@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<div class="content">
+				<pre class="codeinput">
+					<span class="comment">
+  CLSI - computes a rank-L approximation of the input matrix 
+  using the Clustered Latent Semantic Indexing Method [1]
+    [X, Y]=CLSI(A, CLUSTERS, L, FUNC, ALPHA_VAL, SVD_METHOD) 
+    computes the rank-L approximation X*Y of the input matrix 
+    A with the Clustered Latent Semantic Indexing Method [1], 
+    using the cluster structure information from CLUSTERS.
+    FUNC denotes the method used for the selection of the 
+    number of factors from each cluster. Possible values for 
+    FUNC:
+        - 'f': Selection using a heuristic method from [1] 
+          (see KS_SELECTION). 
+        - 'f1': Same as 'f' but use at least one factor 
+          from each cluster. 
+        - 'equal': Use the same number of factors from 
+          each cluster. 
+    ALPHA_VAL is a value in [0, 1] used in the number of 
+    factors selection heuristic [1]. Finally, SVD_METHOD 
+    defines the method used for the computation of the SVD 
+    (svds or propack).
+ 
+    REFERENCES: 
+    [1] D. Zeimpekis and E. Gallopoulos. CLSI: A Flexible 
+    Approximation Scheme from Clustered Term-Document Matrices. 
+    In Proc. 5th SIAM International Conference on Data Mining, 
+    pages 631–635, Newport Beach, California, 2005.
+ 
+  Copyright 2011 Dimitrios Zeimpekis, Eugenia Maria Kontopoulou, 
+                 Efstratios Gallopoulos
+					</span>
+				</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="../intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>		
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

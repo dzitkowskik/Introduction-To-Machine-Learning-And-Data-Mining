@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center">
+			<h2>Retrieval Module (retrieval_gui)</h2>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="justify">
+				 Assume we have processed a collection with tmg_gui, construct a TDM 
+				 with 1,033 documents and 12,184 terms (corresponding to the well-known 
+				 MEDLINE collection) and store the results to "TMG_HOME/data/medline". 
+				 Assume then, we want to retrieve the relevant documents to a specific 
+				 query for the following input:  
+			</p>
+			<ul>
+				<li>
+					<p>insert query: 'the crystalline lens in vertebrates, including humans' </p> 
+				</li>
+				<li>
+					<p>use stored global weights: yes  </p> 
+				</li>
+				<li>
+					<p>stoplist: common_words </p>
+				</li>
+				<li>
+					<p>local term weighting: Term Frequency  </p> 
+				</li>
+				<li>
+					<p>latent semantic analysis by: Clustered Latent Semantic Indexing  </p> 
+				</li>
+				<li>
+					<p>number of factors: 100  </p>
+				</li>
+				<li>
+					<p>similarity measure: Cosine </p>
+				</li>
+				<li>
+					<p>number of most relevant documents: 5 </p>
+				</li>				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="intro.html">Return to main page</a>&nbsp;&nbsp;&nbsp;
+				<a href="retrieval2.html">Step 2</a>
+			</p>
+		</td>
+	</tr>	
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

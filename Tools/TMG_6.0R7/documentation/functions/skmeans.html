@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<div class="content">
+				<pre class="codeinput">
+					<span class="comment">
+  SKMEANS - Spherical k-Means Clustering Algorithm 
+    SKMEANS clusters a term-document matrix using the Spherical 
+    k-means clustering algorithm [1]. CLUSTERS=SKMEANS(A, C, K, 
+    TERMINATION) returns a cluster structure with K clusters 
+    for the term-document matrix A using as initial centroids 
+    the columns of C (initialized randomly when it is empty). 
+    TERMINATION defines the termination method used in spherical 
+    k-means ('epsilon' stops iteration when objective function 
+    increase falls down a user defined threshold - see OPTIONS 
+    input argument - while 'n_iter' stops iteration when a user 
+    defined number of iterations has been reached). 
+    [CLUSTERS, Q]=SKMEANS(A, C, K, TERMINATION) returns also
+    the vector of objective function values for each iteration 
+    and [CLUSTERS, Q, C]=SKMEANS(A, C, K, TERMINATION) returns 
+    the final centroid vectors. 
+    SKMEANS(A, C, K, TERMINATION, OPTIONS) defines optional 
+    parameters: 
+        - OPTIONS.iter: Number of iterations (default 10).
+        - OPTIONS.epsilon: Value for epsilon convergence 
+          criterion (default 1).
+        - OPTIONS.dsp: Displays results (default 1) or not (0) 
+          to the command window.
+ 
+    REFERENCES: 
+    [1] I. S. Dhillon and D. M. Modha, "Concept Decompositions 
+    for Large Sparse Text Data using Clustering", Machine 
+    Learning, 42:1, pages 143-175, Jan, 2001.
+ 
+  Copyright 2011 Dimitrios Zeimpekis, Eugenia Maria Kontopoulou, 
+                 Efstratios Gallopoulos
+					</span>
+				</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="../intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>		
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

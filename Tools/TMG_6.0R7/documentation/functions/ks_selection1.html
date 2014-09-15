@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<div class="content">
+				<pre class="codeinput">
+					<span class="comment">
+  KS_SELECTION1 - implements the heuristic method from [2] for 
+  the selection of the number of factors from each cluster used 
+  in the Clustered Latent Semantic Indexing method [1]. The 
+  number of factors from each cluster is at least 1. 
+    N_ST=KS_SELECTION1(A, N_COLS, ALPHA_VAL, L) returns in N_ST 
+    a vector of integers denoting the number of factors 
+    (sum equals L) selected from each cluster of the tdm A. 
+    N_COLS is a vector containing the last column index for 
+    each column block, while ALPHA_VAL is a value in [0, 1]. 
+ 
+    REFERENCES: 
+    [1] D. Zeimpekis and E. Gallopoulos. CLSI: A Flexible 
+    Approximation Scheme from Clustered Term-Document Matrices. 
+    In Proc. 5th SIAM International Conference on Data Mining, 
+    pages 631–635, Newport Beach, California, 2005.
+    [2] D. Zeimpekis and E. Gallopoulos, "Linear and Non-Linear 
+    Dimensional Reduction via Class Representatives for Text 
+    Classification", In Proc. of the 2006 IEEE International 
+    Conference on Data Mining, pp. 1172-1177, December 2006, 
+    Hong Kong. 
+ 
+  Copyright 2011 Dimitrios Zeimpekis, Eugenia Maria Kontopoulou, 
+                 Efstratios Gallopoulos
+					</span>
+				</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="../intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>		
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

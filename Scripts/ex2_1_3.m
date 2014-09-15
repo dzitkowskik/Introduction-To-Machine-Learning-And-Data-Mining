@@ -1,0 +1,1 @@
+%% exercise 2.1.3cdir = fileparts(mfilename('fullpath')); TMGOpts.stoplist = '../Data/stopWords.txt';[A, D] = tmg(fullfile(cdir,'../Data/textDocs.txt'), TMGOpts);X = full(A)';attributeNames = cellstr(D);%% Display the resultdisplay(attributeNames);display(X);

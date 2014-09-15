@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center">
+			<h2>Dimensionality Reduction Module (tmg_gui)</h2>
+			<p align="center">
+				<img src="images/dr_gui.jpg" width="604" height="598" /><br />
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="justify">
+				 dr_gui is a graphical user interface for "Text to Matrix Generator" that can be 
+				 used for applying a set of dimensionality reduction techniques to term-document 
+				 matrices (TDM's) constructed from tmg_gui.
+			</p>
+			<p align="justify">
+				 See a <a href="dr1.html">demonstration</a> of dr_gui.
+			</p>
+			<p align="justify">
+				For complete up-to-date documentation visit the TMG Wiki: 
+			</p>
+			<p align="center">
+				<a href="http://scgroup6.ceid.upatras.gr:8000/wiki/">
+					http://scgroup6.ceid.upatras.gr:8000/wiki/
+				</a> 
+			</p>			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table align="left" width="100%" border="2" cellpadding="2" cellspacing="2">
+				<tr>
+					<td align="center">
+						<strong>Field Name</strong>
+					</td>
+					<td align="center">
+						<strong>Default</strong>
+					</td>
+					<td align="center">
+						<strong>Description</strong>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Select Dataset
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Select the dataset.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Singular Value Decomposition (SVD)
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Apply the SVD method.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Principal Component Analysis (PCA)
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Apply the PCA method.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Clustered Latent Semantic Indexing (CLSI)
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Apply the CLSI method.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Centroid Method (CM)
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Apply the CM method.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Semidiscrete Decomposition (SDD)
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Apply the SDD method.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						SPQR
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Apply the SPQR method.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						MATLAB (svds)
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Check to use MATLAB function svds for the computation of the SVD or PCA.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Propack
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Check to use PROPACK package for the computation of the SVD or PCA.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Euclidean k-means
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Check to use the euclidean k-means clustering algorithm in the course of CLSI or CM.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						 Spherical k-means
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Check to use the spherical k-means clustering algorithm in the course of CLSI or CM.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						PDDP
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Check to use the PDDP clustering algorithm in the course of CLSI or CM.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Initialize Centroids
+					</td>
+					<td align="center">
+						 At random
+					</td>
+					<td align="left">
+						Defines the method used for the initialization of the centroid vector in the course of k-means. Possibilities are: initialize at random and supplly a variable of '.mat' file with the centroids matrix.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Termination Criterion
+					</td>
+					<td align="center">
+						Epsilon (1)
+					</td>
+					<td align="left">
+						Defines the termination criterion used in the course of k-means. Possibilities are: use an epsilon value (default 1) and stop iteration when the objective function improvement does not exceed epsilon or perform a specific number of iterations (default 10).
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Principal Directions
+					</td>
+					<td align="center">
+						1
+					</td>
+					<td align="left">
+						Number of principal directions used in PDDP.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Maximum num. of PCs
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Check if the PDDP(max-l) variant is to be applied. 
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Variant
+					</td>
+					<td align="center">
+						Basic
+					</td>
+					<td align="left">
+						 A set of PDDP variants. Possibe values: 'Basic', 'Split with k-means', 'Optimat Split', 'Optimal Split with k-means', 'Optimal Split on Projection'.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Automatic Determination of Num. of factors for each cluster
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Check to apply a heuristic for the determination of the number of factors computed from each cluster in the course of the CLSI algorithm.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Number of Clusters
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Number of clusters computed in the course of the CLSI algorithm.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Display Results
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Display results or not to the command windows.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Select at least one factor from each cluster
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Use this option in case low-rank data are to be used in the course of classification.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Number of factors
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Rank of approximation.
+					</td>
+				</tr>												
+				<tr>
+					<td align="left">
+						Store Results
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Check to store results.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Continue
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Apply the selected operation.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Reset
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Reset window to default values.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Exit
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Exit window.
+					</td>
+				</tr>																																																																																																																																									
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>	
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

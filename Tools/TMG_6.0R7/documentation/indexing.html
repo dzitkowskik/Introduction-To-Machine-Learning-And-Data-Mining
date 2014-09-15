@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center">
+			<h2>Indexing Module (tmg_gui)</h2>
+			<p align="center">
+				<img src="images/tmg_new_gui.jpg" width="604" height="598" /><br />
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="justify">
+				 tmg_gui is a graphical user interface for "Text to Matrix Generator" that can be used to create 
+				 or update term-document matrices (TDM's) or create term-query matrices.
+			</p>
+			<p align="justify">
+				 See a <a href="indexing1.html">demonstration</a> of tmg_gui.
+			</p>
+			<p align="justify">
+				For complete up-to-date documentation visit the TMG Website: 
+			</p>
+			<p align="center">
+				<a href="http://scgroup20.ceid.upatras.gr:8000/tmg/">
+					http://scgroup20.ceid.upatras.gr:8000/tmg/
+				</a> 
+			</p>			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table align="left" width="100%" border="2" cellpadding="2" cellspacing="2">
+				<tr>
+					<td align="center">
+						<strong>Field Name</strong>
+					</td>
+					<td align="center">
+						<strong>Default</strong>
+					</td>
+					<td align="center">
+						<strong>Description</strong>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Input File/Directory						
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Files to be parsed with resulting documents separated by "Delimiter". Alternatively, each file in the input directory contains a single document.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Create New tdm						
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Checked if new tdm is to be created (default checked).
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Create Query Matrix
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Checked if new query matrix is to be created (default checked).
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Update tdm
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Checked if an existing tdm is to be updated with new documents. Alternatively, ckecked if an existing tdm is to be updated using different options (change update_struct). 
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Downdate tdm
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Checked if an existing tdm is to be downdated according to the "Document Indices" field.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Dictionary
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Name of .mat file or workspace variable containing the dictionary to be used by tmg_query function if the "Create Query Matrix" radio button is checked.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Global Weights
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Name of .mat file or workspace variable containing the vector of global weights to be used by tmg_query  function if the "Create Query Matrix" radio button is checked.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Update Struct
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Name of .mat file or workspace variable containing the structure to be updated or downdated by tdm_update  (or tdm_downdate)  function if the "Udpate tdm" or "Downdate tdm" radio button is checked.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Document Indices
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Name of .mat file or workspace variable containing the document indices marked for deletion when  the "Downdate tdm" radio button is checked.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Delimiter
+					</td>
+					<td align="center">
+						emptyline
+					</td>
+					<td align="left">
+						 The delimiter between tmg's view of documents. Possible values are 'emptyline', 'none_delimiter' (treats each file as single document) or any other string. 
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Line Delimiter
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Checked if the "Delimiter" takes a whole line of text.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Stoplist
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Name of file containing stopwords, i.e. common words not used in indexing. 
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Min Length
+					</td>
+					<td align="center">
+						3
+					</td>
+					<td align="left">
+						Minimum term length.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Max Length
+					</td>
+					<td align="center">
+						30
+					</td>
+					<td align="left">
+						 Maximum term length.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Min Local Frequency
+					</td>
+					<td align="center">
+						1
+					</td>
+					<td align="left">
+						Minimum local term frequency.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Max Local Frequency
+					</td>
+					<td align="center">
+						inf
+					</td>
+					<td align="left">
+						 Maximum local term frequency.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Min Global Frequency
+					</td>
+					<td align="center">
+						1
+					</td>
+					<td align="left">
+						Minimum global term frequency.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Max Global Frequency
+					</td>
+					<td align="center">
+						inf
+					</td>
+					<td align="left">
+						Maximum global term frequency.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Local Term Weighting
+					</td>
+					<td align="center">
+						Term Frequency
+					</td>
+					<td align="left">
+						 Local term weighting function. Possible values: 'Term Frequency', 'Binary', 'Logarithmic', 'Alternate Log', 'Augmented Normalized Term Frequency'.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Global Term Weighting
+					</td>
+					<td align="center">
+						None
+					</td>
+					<td align="left">
+						Global term weighting function. Possible values: 'None', 'Entropy', 'Inverse Document Frequency (IDF)', 'GfIdf', 'Normal', 'Probabilistic Inverse'.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Database Name
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						The name of the folder (under 'data' directory) where data are to be saved (currently supported only for the 'Create New tdm' module).
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Store in MySQL
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Checked if results are to be saved into MySQL (currently supported only for the 'Create New tdm' module).
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						use Normalization	
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Indicates normalization method. Possible values: 'None', 'Cosine'.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						use Stemming
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Indicates if stemming is to be applied. The algorithm currrently supported is due to Porter. 
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Display Results
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Display results or not to the command windows.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Remove Numbers
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Checked if dictionary should not include numeric words.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Remove Alphanumerics
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Checked if dictionary should not include alphanumeric words.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Parse All Subdirectories
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Checked if subdirectories should be parsed in batch mode (recommended for large collections
+						 to avoid repeated user interaction).
+					</td>
+				</tr>					
+				<tr>
+					<td align="left">
+						Continue
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Apply the selected operation.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Reset
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Reset window to default values.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Exit
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Exit window.
+					</td>
+				</tr>																																																																	
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>	
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

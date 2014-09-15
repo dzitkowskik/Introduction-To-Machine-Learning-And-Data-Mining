@@ -1,0 +1,145 @@
+Matrices, Vector Spaces, and Information Retrieval - Michael W. Berry, Zlatko Drmac, Elizabeth R. Jessup
+The evolution of digital libraries and the Internet has dramatically transformed the pro-cessing, storage, 
+and retrieval of information. Efforts to digitize text, images, video, and audio now consume a substantial 
+portion of both academic and industrial activity. Evenwhen there is no shortage of textual materials on a 
+particular topic, procedures for indexing or extracting the knowledge or conceptual information contained in 
+them can belacking. Recently developed information retrieval technologies are based on the concept of a vector 
+space. Data are modeled as a matrix, and a user's query of the database isrepresented as a vector. Relevant 
+documents in the database are then identified via simple vector operations. Orthogonal factorizations of the 
+matrix provide mechanisms for han-dling uncertainty in the database itself. The purpose of this paper is to 
+show how such fundamental mathematical concepts from linear algebra can be used to manage and indexlarge text 
+collections.
+
+Principal Direction Divisive Partitioning - Daniel Boley
+We propose a new algorithm capable of partitioning a set of documents or other samples based on an embedding in a 
+high dimensional Euclidean space (i.e. in which every document is a vector of real numbers). The method is unusual 
+in that it is divisive, as opposed to agglomerative, and operates by repeatedly splitting clusters into smaller 
+clusters. The splits are not based on any distance or similarity measure. The documents are assembled in to a matrix 
+which is very sparse. It is this sparsity that permits the algorithm to be very efficient. The performance of the 
+method is illustrated with a set of text documents obtained from the World Wide Web. Some possible extensions are 
+proposed for further investigation.
+
+Numerical Progress in Eigenvalue Computation in the 20th - Gene H. Golub and Henk A. van der Vorst
+This paper sketches the main research developments in the area of computational methods 
+for eigenvalue problems during the 20th century. The earliest of such methods dates back 
+to work of Jacobi in the middle of the nineteenth century. Since computing eigenvalues 
+and vectors is essentially more complicated than solving linear systems, it is not 
+surprising that highly significant developments in this area started with the introduction 
+of electronic computers around 1950. In the early decades of this century, however, 
+important theoretical developments had been made from which computational techniques could 
+grow. Research in this area of numerical linear algebra is very active, since there is a 
+heavy demand for solving complicated problems associated with stability and perturbation 
+analysis for practical applications. For standard problems, powerful tools are available, 
+but there still remain many open problems. It is the intention of this contribution to 
+sketch the main developments of this century, especially as they relate to one another, 
+and to give an impression of the state of the art at the turn of our century.
+
+Dimension reduction based on centroids and least squares for efficient processing of text data - M. Jeon, H. Park, and J.B. Rosen
+Dimension reduction in today's vector space based information retrieval system is essentialfor improving computational 
+efficiency in handling massive data. In our previous work we proposed a mathematical framework for lower dimensional 
+representations of text datain vector space based information retrieval, and a couple of dimension reduction method 
+using minimization and matrix rank reduction formula. One of our proposed methods isCentroidQR method which utilizes 
+orthogonal transformation on centroids, and the test results showed that its classification results were exactly 
+the same as those of classificationwith full dimension when a certain classification algorithm is applied. In this 
+paper we discuss in detail the CentroidQR, and prove mathematically its classification propertieswith two different 
+similarity measures of L2 and cosine.
+
+Limited-Memory Matrix Methods with Applications - Tamara Gibson Kolda
+The focus of this dissertation is on matrix decompositions that use a limited amount of computer memory, 
+thereby allowing problems with a very large number of variables to be solved. Specifically, we will focus 
+on two applications areas: optimization and information retrieval. We introduce a general algebraic form for 
+the matrix update in limited-memory quasiNewton methods. Many well-known methods such as limited-memory Broyden 
+Family methods satisfy the general form. We are able to prove several results about methods which satisfy the 
+general form. In particular, we show that the only limited-memory Broyden Family method (using exact line searches) 
+that is guaranteed to terminate within n iterations on an n-dimensional strictly convex quadratic is the 
+limited-memory BFGS method. Furthermore, we are able to introduce several new variations on the limited-memory 
+BFGS method that retain the quadratic termination property. We also have a new result that shows that full-memory 
+Broyden Family methods (using exact line searches) that skip p updates to the quasi-Newton matrix will terminate 
+in no more than n + p steps on an n-dimensional strictly convex quadratic. We propose several new variations on the 
+limited-memory BFGS method and test these on standard test problems. We also introduce and test a new method for a 
+process known as Latent Semantic Indexing (LSI) for information retrieval. The new method replaces the singular 
+value matrix decomposition (SVD) at the heart of LSI with a semi-discrete matrix decomposition (SDD). We show 
+several convergence results for the SDD and compare some strategies for computing it on general matrices. We also 
+compare the SVD-based LSI to the SDD-based LSI and show that the SDD-based method has a faster query computation 
+time and requires significantly less storage. We also propose and test several SDD-updating strategies for adding 
+new documents to the collection.
+
+Lanczos bidiagonalization with partial reorthogonalization - Rasmus Munk Larsen
+A partial reorthogonalization procedure (BPRO) for maintaining semi-orthogonality among the left and right Lanczos 
+vectors in the Lanczos bidiagonalization (LBD) is presented. The resulting algorithm is mathematically equivalent 
+to the symmetric Lanczos algorithm with partial reorthogonalization (PRO) developed by Simon, but works directly 
+on the Lanczos bidiagonalization of A. For computing the singular values and vectors of a large sparse matrix with 
+high accuracy, the BPRO algorithm uses only half the amount of storage and a factor of 3-4 less work compared to 
+methods based on PRO applied to an equivalent symmetric system. Like PRO, the algorithm presented here is based on 
+simple recurrences, which enable it to monitor the loss of orthogonality among the Lanczos vectors directly without 
+forming inner products. These recurrences are used to develop a Lanczos bidiagonalization algorithm with partial 
+reorthogonalization, which has been implemented in a MATLAB package for sparse SVD and eigenvalue problems called 
+PROPACK. Numerical experiments with the routines from PROPACK are conducted using a test problem from inverse 
+helioseismology to illustrate the properties of the method. In addition, a number of test matrices from the 
+Harwell-Boeing collection are used to compare the accuracy and efficiency of the MATLAB implementations of BPRO 
+and PRO with the svds routine in MATLAB 5.1, which uses an implicitly restarted Lanczos algorithm.
+
+k-Plane Clustering - P.S. BRADLEY and O.L. MANGASARIAN
+A finite new algorithm is proposed for clustering m given points in n-dimensional real space into 
+k clusters by generating k planes that constitute a local solution to the nonconvex problem of 
+minimizing the sum of squares of the 2-norm distances between each point and a nearest plane. The 
+key to the algorithm lies in a formulation that generates a plane in n-dimensional space that 
+minimizes the sum of the squares of the 2-norm distances to each of m1 given points in the space.The 
+plane is generated by an eigenvector corresponding to a smallest eigenvalue of an n * n simple matrix 
+derived from the m1 points. The algorithm was tested on the publicly available Wisconsin Breast 
+Prognosis Cancer database to generate well separated patient survival curves. In contrast, the k-mean 
+algorithm did not generate such well-separated survival curves.
+
+Approximate Solutions and Eigenvalue Bounds from Krylov Subspaces - Chris C. Paige and Beresford N. Parlett and Henk A. Van der Vorst
+Approximations to the solution of a large sparse symmetric system of equations are 
+considered.The conjugate gradient and minimum residual approximations are studied without 
+reference to their computation. Several different bases for the associated Krylov subspace 
+are used, including the usual Lanczos basis. The zeros of the iteration polynomial for the 
+minimum residual approximation (harmonic Ritz values) are characterized in several ways and, 
+in addition, attractive convergence properties are established. The connection of these 
+harmonic Ritz values to Lehmann's optimal intervals for eigenvalues of the original matrix 
+appears to be new.
+
+An Iterative Method for Nonsymmetric Systems with Multiple Right-Hand Sides - V. Simonciniy and E. Gallopoulos
+We propose a method for the solution of linear systems AX = B where A is a large, possibly 
+sparse, nonsymmetric matrix of order n, and B is an arbitrary rectangular matrix of order n 
+s with s of moderate size. The method uses a single Krylov subspace per step as a generator 
+of approximations, a projection process, and a Richardson acceleration technique. It thus 
+combines the advantages of recent hybrid methods with those for solving symmetric systems with 
+multiple right-hand sides. Numerical experiments indicate that in several cases the method has 
+better practical performance and significantly lower memory requirements than block versions 
+of nonsymmetric solvers and other proposed methods for the solution of systems with multiple 
+righthand sides.
+
+IMPLICITLY RESTARTED ARNOLDI/LANCZOS METHODS FOR LARGE SCALE EIGENVALUE CALCULATIONS - D. C. Sorensen
+This report provides an introductory overview of the numerical solution of large scale algebraic 
+eigenvalue problems. The main focus is on a class of methods called Krylov subspace projection 
+methods. The Lanczos method is the premier member of this class and the Arnoldi method is a 
+generalization to the nonsymmetric case. A recently developed and very promising variant of the 
+Arnoldi/Lanczos scheme called the Implicitly Restarted Arnoldi Method is presented here in detail. 
+This method is highlighted because of its suitability as a basis for software development. It may 
+be viewed as a truncated form of the implicitly shifted QR-algorithm that is appropriate for very 
+large problems. Based on this technique, a public domain software package called ARPACK has been 
+developed in Fortran 77 for finding a few eigenvalues and eigenvectors of large scale symmetric, 
+nonsymmetric, standard or generalized problems. This package has performed well on workstations, 
+parallel-vector supercomputers, distributed memory parallel systems and clusters of workstations. 
+The important features of this package are presented along with a discussion some applications 
+and performance indicators.
+
+PDDP(l): Towards a Flexible Principal Direction Divisive Partitioning Clustering Algorithm - D. Zeimpekis and E. Gallopoulos
+In this "work-in-progress" we consider the problem ofclustering large document collections into clusters 
+in the context of the vector space model. We consider the Principal Direction Divisive Partitioning (PDDP) 
+algorithm andevaluate its performance relative to k-means type algorithms. We introduce and outline 
+PDDP(l), a generalizationof PDDP and explore its effectiveness showing by means of numerical experiments 
+on standard datasets that it frequently improves the overall performance of PDDP andthat it could provide 
+an interesting alternative to LSI.
+
+STRUCTURE AND PERTURBATION ANALYSIS OF TRUNCATED SVD FOR COLUMN-PARTITIONED MATRICES - ZHENYUE ZHANG AND HONGYUAN ZHA
+In this paper we study truncated SVD for column-partitioned matrices. In particular, 
+we analyze the relation between the truncated SVD of a matrix and the truncated SVDs 
+of its submatrices. We give necessary and sufficient conditions under which truncated 
+SVD of a matrix can be constructed from those of its submatrices. We then present 
+perturbation analysis to show that an approximate truncated SVD can still be computed 
+even if the given necessary and sufficient conditions are only approximately satisfied. 
+We also apply our general results to a class of matrices with the so-called 
+low-rank-plus-shift structure.

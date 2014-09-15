@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="styles/main.css" media="screen" type="text/css" />
+<title>Text to Matrix Generator - Indexing Module</title>
+<style type="text/css">
+	body {
+		background-color: #ffffff;
+		font-size: 11pt; 
+		line-height: 20px;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+<table id="content_frame_table" align="left" width="96%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center">
+			<h2>Retrieval Module (tmg_gui)</h2>
+			<p align="center">
+				<img src="images/retrieval_gui.jpg" width="604" height="598" /><br />
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="justify">
+				 retrieval_gui is a graphical user interface for "Text to Matrix Generator" that can be 
+				 used for applying a set of retrieval methods to term-document 
+				 matrices (TDM's) constructed from tmg_gui.
+			</p>
+			<p align="justify">
+				 See a <a href="retrieval1.html">demonstration</a> of retrieval_gui.
+			</p>
+			<p align="justify">
+				For complete up-to-date documentation visit the TMG Wiki: 
+			</p>
+			<p align="center">
+				<a href="http://scgroup6.ceid.upatras.gr:8000/wiki/">
+					http://scgroup6.ceid.upatras.gr:8000/wiki/
+				</a> 
+			</p>			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table align="left" width="100%" border="2" cellpadding="2" cellspacing="2">
+				<tr>
+					<td align="center">
+						<strong>Field Name</strong>
+					</td>
+					<td align="center">
+						<strong>Default</strong>
+					</td>
+					<td align="center">
+						<strong>Description</strong>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Select Dataset
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Select the dataset.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Insert Query
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						The query to be executed.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Alternative Global Weights
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Global weights vector used for the construction of the query vector.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Use Stored Global Weights
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Use the global weights vector found on the container directory of the dataset.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Stoplist
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Use a stoplist.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Local Term Weighting
+					</td>
+					<td align="center">
+						Term Frequency
+					</td>
+					<td align="left">
+						The local term weighting to be used.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Vector Space Model
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						Apply the Vector space Model retrieval method.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Latent Semantic Analysis
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						  The method used in the course of the Latent Semantic Analysis technique. Possible values: 'Singular Value Decomposition', 'Principal Component Analysis', 'Clusteredd Latent Semantic Analysis', 'Centroid Mathod', 'Semidiscrete Decomposition', 'SPQR'.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						 Number of Factors
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Select the number of factors used during the retrieval process.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Similarity Measure
+					</td>
+					<td align="center">
+						cosine
+					</td>
+					<td align="left">
+						 Similarity measure used during the retrieval process.
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						Number of most revevant
+					</td>
+					<td align="center">
+						●
+					</td>
+					<td align="left">
+						 Defines the number of most relevant documents returned for a query.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Similarity measure exceeds
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Defines the minimum similarity measure value for which a document is treated as relevant to the query.
+					</td>
+				</tr>																
+				<tr>
+					<td align="left">
+						Continue
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Apply the selected operation.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Reset
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						 Reset window to default values.
+					</td>
+				</tr>				
+				<tr>
+					<td align="left">
+						Exit
+					</td>
+					<td align="center">
+						-
+					</td>
+					<td align="left">
+						Exit window.
+					</td>
+				</tr>																																																													
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align="center">
+				<a href="intro.html">Return to main page</a>
+			</p>
+		</td>
+	</tr>	
+</table>
+<script type="text/javascript">
+	var frame_height = document.getElementById("content_frame_table").clientHeight;
+	parent.document.getElementById("content_frame_id").height = frame_height;
+</script>
+</body>
+</html>

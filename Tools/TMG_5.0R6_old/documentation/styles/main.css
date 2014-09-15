@@ -1,0 +1,207 @@
+@charset "windows-1253";
+body {
+	background-color: #cacbcb;
+	font-size: 11pt; 
+	color: #552800; 
+	font-family: Tahoma; 
+	line-height: 11px;
+	margin: 0px 0px 0px 0px; 
+	text-align: left;
+}
+
+.main_table {
+	font-size: 11pt; 
+	color:#552800; 
+	font-family: Tahoma; 
+	line-height:20px; 
+	text-align:left;
+}
+
+.form_table {
+	font-size: 11pt; 
+	color:#552800; 
+	font-family: Tahoma; 
+	line-height:30px; 
+	text-align:left;
+}
+
+.files_table {
+	font-size: 10pt; 
+	color:#552800; 
+	font-family: Tahoma; 
+	border-spacing:1px;
+}
+
+.files_table_header_row {
+	background-color: #adbce7;
+	font-size: 11pt; 
+	color:#FFFFFF;
+	font-weight: bold; 
+	font-family: Tahoma;
+	padding: 2px 0 2px 6px;  
+}
+
+.files_table_row {
+	font-size: 10pt; 
+	color:#552800; 
+	font-family: Tahoma;
+	padding: 2px 0 2px 6px;
+	border-bottom: 1px #acbce7 solid;
+}
+
+.retrieval_results_header_row {
+	background-color: #adbce7;
+	font-size: 11pt; 
+	color:#FFFFFF;
+	font-weight: bold; 
+	font-family: Tahoma;
+	padding: 0px 0 0px 6px;  
+}
+
+.retrieval_results_row {
+	font-size: 11pt;  
+	font-family: Tahoma;
+	padding: 2px 0 20px 0;  
+}
+
+.service_table {
+	font-size: 10pt; 
+	color:#552800; 
+	font-family: Tahoma;  
+}
+
+.service_table_header_row {
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.service_table_subheader_row {
+	font-size: 12pt;
+	font-weight: bold; 	
+}
+
+.main_table a, .main_table a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
+.main_table a:hover {
+	color: #e87f2a;
+}
+
+.header {
+	font-size: 32pt; 
+	color:#ffffff; 
+	font-family: Tahoma;  
+	font-weight: bold; 	
+}
+
+.footer {
+	font-size: 10pt; 
+	color:#552800; 
+	font-family: Tahoma;  
+	font-weight: normal;
+	line-height: 20px; 	
+}
+
+#menu dt, #menu ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+line-height: 32px;
+}
+#menu {
+position: relative;
+top: 0em;
+left: 1.3em;
+width: 203px;
+}
+
+#menu dt {
+cursor: pointer;
+margin: 2px 0;
+text-align: left;
+background:url(../images/menu_bg.jpg) no-repeat left center;
+width: 203px;
+height: 36px;
+}
+
+#menu ul {
+padding: 2px;
+}
+#menu dt a {
+color: #FFFFFF;
+font-family: Tahoma;
+font-size: 13px;
+font-weight: bold;
+text-decoration: none;
+display: block;
+margin-left: 10px;
+}
+#menu dt a:hover {
+color: #888888;
+}
+
+.form_field {
+	border: 1px #acbce7 solid;
+	background-color: #eeeeee;
+}
+
+.form_button {
+	color: #fff; 
+	font-weight: bold; 
+	background-color: #acbce7;
+	border: #fff solid 1px;
+}
+
+.button {
+	border: #fff solid 1px;
+	background-color: #acbce7;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	padding: 2px 4px 2px 4px;
+}
+
+.upload_button {
+	border: #fff solid 1px;
+	background-color: #acbce7;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	padding: 4px 4px 4px 4px;
+}
+
+.grayed_text {
+	color: #aaaaaa;
+	font-size: 10pt;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover {
+	color: #e87f2a;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+div.content {
+  max-width: 670px;
+  /* Hack for IE6 */
+  width: auto !important; width: 670px;
+}
+
+pre.codeinput {
+  background: #ecebeb;
+  padding: 10px;
+}
+
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+}
+
+span.comment {color: #5e677e}
+

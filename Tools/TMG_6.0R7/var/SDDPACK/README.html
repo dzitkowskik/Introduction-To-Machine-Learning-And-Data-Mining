@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>SDDPACK</title>
+</head>
+
+<body bgcolor="#ffffff">
+&nbsp;
+<h1 align="center">
+SDDPACK<br>
+Software for the  Semidiscrete Decomposition
+</h1>
+
+<hr noshade>
+<hr noshade>
+
+<ul>
+  <li> <a href="#legal">Legal and Author Information</a>
+      <ul>
+	<li> <a href="#legal">Software Copyright and License</a>
+	<li> <a href="#authors">Authors</a>
+	<li> <a href="#thanks">Support</a>
+	<li> <a href="#bugs">Reporting Bugs</a>
+      </ul>
+  <li> <a href="#about">About SDDPACK</a>
+      <ul>
+	<li> <a href="#about">Description</a>
+	<li> <a href="#download">Obtaining the Software</a>
+	<li> <a href="#install">Installation</a>
+	<li> <a href="#documentation">Documentation</a>
+      </ul>
+  <li> <a href="#matlab">Matlab Codes</a>
+      <ul>
+	<li> <a href="#matlab">SDD</a>
+	<li> <a href="#sddweight">Weighted SDD</a>
+	<li> <a href="#sddtensor">Tensor SDD</a>
+      </ul>
+  <li> <a href="#sdd">C Code for SDD</a>
+      <ul>
+	<li> <a href="#sdd">Installation</a>
+	<li> <a href="#sddusage">Usage</a>
+      </ul>
+  <li> <a href="#problems">Test Problems from MatrixMarket</a>
+</ul>
+
+<hr noshade>
+<hr noshade>
+
+<h3>
+<a name = "legal">Software Copyright and License</a>
+</h3>
+
+<p>SDDPACK: Software for the Semidiscrete Decomposition.<br>
+Copyright &copy; 1999 Tamara G. Kolda and Dianne P. O'Leary.
+
+<p>This program is free software; you can redistribute it and/or
+modify it under the terms of the <a
+href="http://www.gnu.org/copyleft/gpl.html">GNU General Public
+License</a> as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later version.
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+</p>
+
+<hr noshade>
+
+<h3>
+<a name="authors">Authors</a>
+</h3>
+
+<p>Tamara G. Kolda<br>
+Computational Sciences and Mathematics Research Department<br>
+Sandia National Labs<br>
+Livermore, CA 94551<br>
+<a href="mailto:tgkolda@sandia.gov">tgkolda@sandia.gov</a><br>
+<a href="http://www.ca.sandia.gov/~tgkolda/">http://www.ca.sandia.gov/~tgkolda</a>
+
+<p>Dianne P. O'Leary<br>
+Department of Computer Science<br>
+University of Maryland<br>
+College Park, MD 20742<br>
+<a href="mailto:oleary@cs.umd.edu">oleary@cs.umd.edu</a><br>
+<a href="http://www.cs.umd.edu/users/oleary">http://www.cs.umd.edu/users/oleary</a>
+</p>
+<hr noshade>
+
+<h3>
+<a name="thanks">Support</a>
+</h3>
+
+<p>Kolda's research supported by the Applied
+Mathematical Sciences Research Program of Office of Energy Research in
+the U.S.  Department of Energy, under contract DE-AC05-96OR22464 with
+Lockheed Martin Energy Research Corporation; the National Physical Sciences
+Consortium in conjunction with the University of Maryland and
+the National Security Agency; and the IDA Center for Computing Sciences.
+
+<p>O'Leary's research supported by
+the National Science Foundation under Grant
+  CCR-97-32022 and by the Departement Informatik, ETH Zurich,
+  Switzerland.
+</p>
+
+<hr noshade>
+
+<h3>
+<a name="bugs">Bugs</a>
+</h3>
+
+<p>Reports of bugs should be sent to
+<a href="mailto:tgkolda@sandia.gov">tgkolda@sandia.gov</a>.
+</p>
+
+<hr noshade>
+<hr noshade>
+<h3><a name="about">Description</a></h3>
+
+<p> The semidiscrete decomposition (SDD) approximates a matrix as a
+weighted sum of outer products formed by vectors with entries
+constrained to be in the set {-1, 0, 1}.
+
+<p>It is useful for image compression and for latent semantic indexing
+(LSI) in information retrieval.
+
+<p>The primary advantage of the SDD over other types of matrix
+approximations such as the truncated singular value decomposition
+(SVD) is that it typically provides a more accurate approximation for
+far less storage.
+
+<p>This package provides software in Matlab and in C to compute
+the SDD.</p>
+
+<hr noshade>
+
+<h3>
+<a name="download">Obtaining the Software</a>
+</h3>
+
+<p>
+The software is available for download at
+<a href="http://www.cs.umd.edu/users/oleary/SDDPACK">http://www.cs.umd.edu/users/oleary/SDDPACK</a>
+in the file <a href="http://www.cs.umd.edu/users/oleary/SDDPACK/SDDPACK.tgz">SDDPACK.tgz</a>.
+</p>
+
+<hr noshade>
+
+<h3>
+<a name="install">Installation</a>
+</h3>
+
+<p>After downloading the file <code>SDDPACK.tgz</code>, type
+"<code>gunzip -c sdd.tgz | tar xvf -</code>". This creates
+a directory called SDDPACK containing the following:
+
+<pre>
+<a href="README.html">SDDPACK/README.html</a>
+<a href="Makefile">SDDPACK/Makefile</a>
+<a href="gpl.txt">SDDPACK/gpl.txt</a>
+<a href="include/sdd.h">SDDPACK/include/sdd.h</a>
+<a href="include/qsortopt.h">SDDPACK/include/qsortopt.h</a>
+<a href="src/sdd.c">SDDPACK/src/sdd.c</a>
+<a href="src/decomp.c">SDDPACK/src/decomp.c</a>
+<a href="src/convertmtx.c">SDDPACK/src/convertmtx.c</a>
+<a href="src/convertsdd.c">SDDPACK/src/convertsdd.c</a>
+<a href="matlab/mtxread.m">SDDPACK/matlab/mtxread.m</a>
+<a href="matlab/mtxwrite.m">SDDPACK/matlab/mtxwrite.m</a>
+<a href="matlab/sdd.m">SDDPACK/matlab/sdd.m</a>
+<a href="matlab/sddweight.m">SDDPACK/matlab/sddweight.m</a>
+<a href="matlab/sddtensor.m">SDDPACK/matlab/sddtensor.m</a>
+<a href="matlab/sddfun.m">SDDPACK/matlab/sddfun.m</a>
+<a href="matlab/sddweightfun.m">SDDPACK/matlab/sddweightfun.m</a>
+<a href="testdata/test1.mtx">SDDPACK/testdata/test1.mtx</a>
+<a href="testdata/test1.gif">SDDPACK/testdata/test1.gif</a>
+<a href="doc/umcp-cs-tr-4012.ps">SDDPACK/doc/umcp-cs-tr-4012.ps</a>
+</pre>
+
+<hr noshade>
+
+<h3>
+<a name="documentation">Documentation</a>
+</h3>
+
+<p> Most documentation to run the software is given in this file. Also, each file
+contains comments with information on the code. 
+General information about the SDD and its variants is provided in the
+included paper:
+<blockquote>
+Tamara G. Kolda and Dianne P. O'Leary,
+<a href="doc/umcp-cs-tr-4012.ps">Computation and Uses of the Semidiscrete
+Matrix Decomposition</a>,
+Computer Science Department Report CS-TR-4012
+Institute for Advanced Computer Studies Report UMIACS-TR-99-22,
+University of Maryland,
+April 1999.
+</blockquote>
+
+</p>
+
+<hr noshade>
+<hr noshade>
+
+<h3>
+<a name="matlab">SDD Matlab Code</a>
+</h3>
+
+<p>Matlab codes are included in the directory
+<a href="matlab/"><code>SDDPACK/matab</code></a>. To use these codes, be
+sure to be in the <code>SDDPACK/matlab</code> directory (or add this
+directory to your Matlab path).
+
+<p> We have included a small 5 x 5 test problem in <code><a
+href="SDDPACK/testdata/test1.mtx">testdata/test1.mtx</a></code>.  The matlab
+routine <a href="matlab/mtxread.m"><code>mtxread</code></a>, included
+in SDDPACK, reads the matrix file.
+
+<pre>
+>> A = mtxread('../testdata/test1.mtx');
+>> full(A)
+
+ans =
+
+    0.5828    0.2259    0.2091    0.5678    0.4154
+    0.4235    0.5798    0.3798    0.7942    0.3050
+    0.5155    0.7604    0.7833    0.0592    0.8744
+    0.3340    0.5298    0.6808    0.6029    0.0150
+    0.4329    0.6405    0.4611    0.0503    0.7680
+</pre>
+
+<p>Using the routine <a href="matlab/sdd.m"><code>sdd</code></a>,
+included in SDDPACK, we can compute the 10-term SDD using the default
+settings as follows:
+
+<pre>
+>> [D, X, Y] = sdd(A, 10)
+
+D =
+
+    0.4797
+    0.3262
+    0.1939
+    0.0847
+    0.1017
+    0.0588
+    0.0387
+    0.0324
+    0.0551
+    0.0237
+
+
+X =
+
+     1     0    -1    -1     1     1    -1     0     0     1
+     1     1     0     1    -1     1    -1    -1     0    -1
+     1    -1     1     1     0    -1     1    -1     0    -1
+     1     1     1    -1    -1    -1     0     1     0    -1
+     1    -1     0     0     0     1     1     0     1     0
+
+
+Y =
+
+     1     0     0     0     1     0     0    -1    -1     0
+     1     0     1     1     0     1     1     0     1     0
+     1     0     1     0     0    -1     1    -1     0     1
+     1     1    -1     1     0    -1    -1     1     0     0
+     1    -1     0     1     0     0    -1    -1     0     0
+</pre>
+
+<p>We have also included a utility called
+<a href="matlab/sddfun.m"><code>sddfun</code></a> that
+compares the SVD to the SDD with different starting criteria.
+We show the text below; the graphic is in
+<a href="testdata/test1.gif"><code>SDDPACK/testdata/test1.gif</code></a>.
+
+<pre>
+>> sddfun(A)
+
+Computing SVD
+
+Rank of matrix: 5
+
+Computing SDD with option 1
+Computing SDD with option 2
+Computing SDD with option 3
+Computing SDD with option 4
+
+Method Color Line Dot
+------ ----- ---- ---
+SVD      g    -    x
+SDD-1    b    -    o
+SDD-2    m    :    ^
+SDD-3    r    -.   +
+SDD-4    c    --   *
+
+Method  Rel Resid  Inn Its  Density
+------  ---------  -------  -------
+SDD-1     11.92      3.20    66.00
+SDD-2     11.85      2.60    72.00
+SDD-3     13.95      2.80    84.00
+SDD-4     11.92      2.80    66.00
+</pre>
+
+</p>
+
+<hr noshade>
+
+<h3>
+<a name="sddweight">Weighted SDD Matlab Code</a>
+</h3>
+
+The routine <a href="matlab/sddweight.m">sddweight</a>, included with
+SDDPACK, computes the weighted SDD of a given matrix. Using the same A
+from the previous example, and defining W as given below, we can compute
+the 5-term weighted SDD as follows:
+
+<pre>
+>> A = full(mtxread('../testdata/test1.mtx'));
+>> W = ones(5) - eye(5);
+>> [D, X, Y] = sddweight(A, W, 5)
+
+D =
+
+    0.4337
+    0.3511
+    0.1909
+    0.1636
+    0.2224
+
+
+X =
+
+     1     0    -1     0     0
+     1     1     0     0     1
+     1    -1     1     0     0
+     1     1     1     0     0
+     1    -1     1    -1     0
+
+
+Y =
+
+     1     0     0     0     0
+     1     0     1     0     0
+     1     0     1     1     0
+     1     1     0     0     0
+     1    -1     0     0     1
+
+</pre>
+
+SDDPACK also contains <a href="matlab/sddweightfun.m">sddweightfun</a>, similar to
+<a href="matlab/sddfun.m">sddfun</a> described above. Sample output is given below.
+This also produces a figure, but we do not include it here.
+
+<pre>
+>> sddweightfun(A,W)
+
+Rank of matrix: 5
+
+Computing SDDWEIGHT with option 1
+Computing SDDWEIGHT with option 2
+Computing SDDWEIGHT with option 3
+Computing SDDWEIGHT with option 4
+
+  Method    Color Line Dot
+----------- ----- ---- ---
+SDDWEIGHT-1   b    -    o
+SDDWEIGHT-2   m    :    ^
+SDDWEIGHT-3   r    -.   +
+SDDWEIGHT-4   c    --   *
+
+  Method     Rel Resid  Inn Its  Density
+-----------  ---------  -------  -------
+SDDWEIGHT-1    13.11      3.10    52.00
+SDDWEIGHT-2    13.77      2.80    52.00
+SDDWEIGHT-3     9.85      3.40    76.00
+SDDWEIGHT-4    10.03      3.40    66.00
+</pre>
+
+<hr noshade>
+
+<h3>
+<a name="sddtensor">Tensor SDD Matlab Code</a>
+</h3>
+
+The tensor SDD can be computed with the Matlab code <a
+href="matlab/sddtensor.m">sddtensor</a>, included with SDDPACK.
+An example of its usage is given below.
+
+<pre>
+>> rand('state', 0);
+>> A = rand(3,4,2);
+>> [D, X] = sddtensor(A, 5)
+
+D =
+
+    0.5712
+    0.3364
+    0.2278
+    0.2379
+    0.1797
+
+
+X = 
+
+    [3x5 double]    [4x5 double]    [2x5 double]
+
+>> X{1}
+
+ans =
+
+     1    -1     1     0     0
+     1     1    -1    -1     1
+     1    -1    -1     1     0
+
+>> X{2}
+
+ans =
+
+     1     0     1     1     1
+     1     0    -1     0     1
+     1     1     0     1    -1
+     1     1     0     0     0
+
+>> X{3}
+
+ans =
+
+     1     0     1     1     1
+     1     1     1    -1     1
+
+</pre>
+
+<hr noshade>
+<hr noshade>
+
+<h3>
+<a name="sdd">Installing the SDD C Code</a>
+</h3>
+
+<p>Change directories into <code>SDDPACK</code>.
+To compile the code, check the <a
+href="Makefile"><code>Makefile</code></a>.  You should check the
+location of the remove program and set the flags CC, CFLAGS, and LIB
+for your system. Several examples have been included. Once that is
+fixed, type "<code>make</code>" at the command prompt.
+
+<p>The flag <code>-DQSORTOPT</code> is optional. It provides an faster
+qsort that the default on most machines.
+
+<p><strong>Special Note:</strong> If you do not have a 32- or 64-bit
+architecture, than you must be sure to include the following flag in
+the CFLAGS definition, e.g., <code>-DIDXSHIFT=7</code>
+if 128-bit architecture.
+</p>
+
+<hr noshade>
+
+<h3>
+<a name="sddusage">Using the C Code</a>
+</h3>
+Run the code from the directory SDDPACK. A sample
+is given below. Results may vary slightly from machine to machine.
+
+<pre>
+> decomp -k 10 testdata/test1.mtx testdata/test1.sdd
+*** output from decomp ***
+matrix file        : testdata/test1.mtx
+SDD file           : testdata/test1.sdd
+existing SDD file  : <none>
+terms              : 10
+accuracy           : 0.000000
+tolerance          : 0.010000
+max inner its      : 100
+y init choice      : 1
+input type         : text
+
+Iteration Starting Residual Improvement Inner  Total
+  Number   Index   Squared    (beta)     Its  InnerIts
+--------- -------- -------- ----------- ----- --------
+    1         2    1.41e+00 5.75170e+00   3       3
+    2         4    5.57e-01 8.51472e-01   3       6
+    3         7    2.19e-01 3.38517e-01   3       9
+    4        10    1.33e-01 8.60342e-02   2      11
+    5        11    1.02e-01 3.10079e-02   2      13
+    6        12    5.00e-02 5.18036e-02   4      17
+    7        17    2.60e-02 2.40155e-02   2      19
+    8        19    1.33e-02 1.26359e-02   3      22
+    9        22    7.27e-03 6.06216e-03   2      24
+   10        23    5.02e-03 2.25306e-03   2      26
+
+      -- SDD information --
+final residual norm         : 7.0855e-02
+final relative residual norm: 0.026
+total outer iterations      : 10
+average inner iterations    : 2.600
+average init iterations     : 2.300
+
+> more testdata/test1.sdd
+%% Semidiscrete Decomposition (SDD)
+%% Matrix: testdata/test1.mtx Terms: 10 Accr: 0.00e+00 Tol: 1.00e-02 InnIts: 100 Init: 1
+10 5 5
+4.7965389490127563476562500e-01
+3.2624220848083496093750000e-01
+1.9394071400165557861328125e-01
+8.4672987461090087890625000e-02
+1.0166592150926589965820312e-01
+5.8767084032297134399414062e-02
+3.8742337375879287719726562e-02
+3.2449815422296524047851562e-02
+5.5055230855941772460937500e-02
+2.3733202368021011352539062e-02
+  1  1  1  1  1
+  0  1 -1  1 -1
+ -1  0  1  1  0
+ -1  1  1 -1  0
+  1 -1  0 -1  0
+  1  1 -1 -1  1
+ -1 -1  1  0  1
+  0 -1 -1  1  0
+  0  0  0  0  1
+  1 -1 -1 -1  0
+  1  1  1  1  1
+  0  0  0  1 -1
+  0  1  1 -1  0
+  0  1  0  1  1
+  1  0  0  0  0
+  0  1 -1 -1  0
+  0  1  1 -1 -1
+ -1  0 -1  1 -1
+ -1  1  0  0  0
+  0  0  1  0  0
+
+</pre>
+
+<p>Note that these results match what we got with the matlab version
+of SDD on the same matrix.
+
+<p>By default, the SDD performs i/o in text mode. However, to get the
+advantage that the SDD has in terms of size, it is best to use binary
+i/o. We have included conversion programs for the matrices and SDD's.
+Their usage is shown below.
+
+<pre>
+>  convertmtx testdata/test1.mtx testdata/test1.mtx.dat
+*** output from convertmtx ***
+Input File  : testdata/test1.mtx
+Output File : testdata/test1.mtx.dat
+> decomp -k 10 -b testdata/test1.mtx.dat testdata/test1.sdd.dat
+*** output from decomp ***
+matrix file        : testdata/test1.mtx.dat
+SDD file           : testdata/test1.sdd.dat
+existing SDD file  : <none>
+terms              : 10
+accuracy           : 0.000000
+tolerance          : 0.010000
+max inner its      : 100
+y init choice      : 1
+input type         : binary
+
+Iteration Starting Residual Improvement Inner  Total
+  Number   Index   Squared    (beta)     Its  InnerIts
+--------- -------- -------- ----------- ----- --------
+    1         2    1.41e+00 5.75170e+00   3       3
+    2         4    5.57e-01 8.51472e-01   3       6
+    3         7    2.19e-01 3.38517e-01   3       9
+    4        10    1.33e-01 8.60342e-02   2      11
+    5        11    1.02e-01 3.10079e-02   2      13
+    6        12    5.00e-02 5.18036e-02   4      17
+    7        17    2.60e-02 2.40155e-02   2      19
+    8        19    1.33e-02 1.26359e-02   3      22
+    9        22    7.27e-03 6.06216e-03   2      24
+   10        23    5.02e-03 2.25306e-03   2      26
+
+      -- SDD information --
+final residual norm         : 7.0855e-02
+final relative residual norm: 0.026
+total outer iterations      : 10
+average inner iterations    : 2.600
+average init iterations     : 2.300
+
+> convertsdd -b testdata/test1.sdd.dat test1.sdd
+*** output from convertsdd ***
+Input File  : testdata/test1.sdd.dat
+Output File : test1.sdd
+
+> more testdata/test1.sdd
+%% Semidiscrete Decomposition (SDD)
+%% Matrix: testdata/test1.mtx Terms: 10 Accr: 0.00e+00 Tol: 1.00e-02 InnIts: 100 Init: 1
+10 5 5
+4.7965389490127563476562500e-01
+3.2624220848083496093750000e-01
+1.9394071400165557861328125e-01
+8.4672987461090087890625000e-02
+1.0166592150926589965820312e-01
+5.8767084032297134399414062e-02
+3.8742337375879287719726562e-02
+3.2449815422296524047851562e-02
+5.5055230855941772460937500e-02
+2.3733202368021011352539062e-02
+  1  1  1  1  1
+  0  1 -1  1 -1
+ -1  0  1  1  0
+ -1  1  1 -1  0
+  1 -1  0 -1  0
+  1  1 -1 -1  1
+ -1 -1  1  0  1
+  0 -1 -1  1  0
+  0  0  0  0  1
+  1 -1 -1 -1  0
+  1  1  1  1  1
+  0  0  0  1 -1
+  0  1  1 -1  0
+  0  1  0  1  1
+  1  0  0  0  0
+  0  1 -1 -1  0
+  0  1  1 -1 -1
+ -1  0 -1  1 -1
+ -1  1  0  0  0
+  0  0  1  0  0
+</pre>
+
+<p> Even this example demonstrates how much room can be saved using
+binary mode rather than text: The file <code>test1.sdd</code> requires
+772 bytes of storage, while <code>test1.sdd.dat</code> requires only
+236 bytes.</p>
+
+<hr noshade>
+<hr noshade>
+
+<h3>
+<a name="problems">MatrixMarket Test Problems</a>
+</h3>
+
+We used four <a
+href="http://math.nist.gov/MatrixMarket/">MatrixMarket</a> matrices in
+the examples in our paper.  These are included in the tar file
+<a href="http://www.cs.umd.edu/users/oleary/SDDPACK/mtxfiles.tgz"><code>mtxfiles.tgz</code></a>.
+Type "gunzip -c mtxfiles.tgz | tar xvf -" to unzip them. 
+<p>
+
+<hr noshade>
+<hr noshade>
+<p>
+Copyright &copy; 1999 Tamara G. Kolda and Dianne P. O'Leary<br>
+Comments? <a href="mailto:tgkolda@sandia.gov">tgkolda@sandia.gov</a><br>
+<!-- hhmts start -->
+Last modified: Tue Dec  7 10:21:33 PST 1999
+<!-- hhmts end -->
+</p>
+</body> </html>
