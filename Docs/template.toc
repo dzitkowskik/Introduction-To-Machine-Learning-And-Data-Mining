@@ -1,0 +1,13 @@
+\select@language {UKenglish}
+\contentsline {chapter}{Contents}{ii}{section*.1}
+\contentsline {chapter}{List of Figures}{ii}{section*.2}
+\contentsline {chapter}{List of Tables}{iii}{section*.3}
+\contentsline {subsection}{Algorytm}{1}{section*.4}
+\contentsline {subsubsection}{Dow\IeC {\'o}d poprawno\IeC {\'s}ci}{3}{section*.5}
+\contentsline {chapter}{\chapternumberline {1}Testing}{9}{chapter.1}
+\contentsline {section}{\numberline {1.1}Images}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Tables}{9}{section.1.2}
+\contentsline {section}{\numberline {1.3}References}{9}{section.1.3}
+\contentsline {section}{\numberline {1.4}Bibliography}{10}{section.1.4}
+\contentsline {appendix}{\chapternumberline {A}Appendix}{11}{appendix.A}
+\contentsline {chapter}{Appendix}{11}{section*.7}

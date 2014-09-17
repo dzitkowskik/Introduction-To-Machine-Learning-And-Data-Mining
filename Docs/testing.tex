@@ -1,0 +1,28 @@
+\chapter{Testing}
+\section{Images}
+Always have images/figures in \emph{both} EPS and PDF/PNG/JPG format! (unless you know you only will be using pdfLaTeX)
+
+
+\begin{figure}[!tbh]
+	\centering
+	\includegraphics[width=0.5\textwidth]{testimage}
+	\caption{Test of image insertion.}
+	\label{fig:testimage}
+\end{figure}
+
+\section{Tables}
+\begin{table}[!h]
+\centering%
+\caption{Simple table.}\label{tab:table}
+\begin{tabular}{| r l |}
+   \hline
+   aaaaaaaaaaaaaaa & bbbbbbbbbbbbb\\
+   c & d\\
+   \hline
+\end{tabular}
+\end{table}
+
+\section{References} References are made with `\ref{tab:table}'. Refer to a page with 
+`\pageref{tab:tabel}'.
+
+\section{Bibliography} \cite{Deitel:2002} is a reference to a book.
