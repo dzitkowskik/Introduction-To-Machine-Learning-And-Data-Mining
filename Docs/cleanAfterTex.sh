@@ -4,3 +4,5 @@
 	rm *.log
 	rm *.toc
 	rm *.synctex.gz
+  rm *.out
+  rm *.lot
