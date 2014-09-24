@@ -1,4 +1,5 @@
-\chapter*{Data set description}
+\chapter*{Description}
+\section*{Selected data set}
 \begin{description}
 \item[Title] Letter Image Recognition Data
 \item[Characteristics]  Multivariate
@@ -8,12 +9,19 @@
 \item[Missing Values?] No
 \end{description}
 
-The objective is to identify each of a large number of black-and-white rectangular pixel displays as one of the 26 capital letters in the English alphabet. The character images were based on 20 different fonts and each letter within these 20 fonts was randomly distorted to produce a file of 20,000 unique stimuli. Each stimulus was converted into 16 primitive numerical attributes (statistical moments and edge counts) which were then scaled to fit into a range of integer values from 0 through 15. \\
+The objective is to identify each of a large number of black-and-white rectangular
+pixel displays as one of the 26 capital letters in the English alphabet. The
+character images were based on 20 different fonts and each letter within these
+20 fonts was randomly distorted to produce a file of 20,000 unique stimuli.
+Each stimulus was converted into 16 primitive numerical attributes (statistical
+moments and edge counts) which were then scaled to fit into a range of integer
+values from 0 through 15. \\
 \\
 \noindent
 Data was obtained from a website: \\
 \url{http://archive.ics.uci.edu/ml/datasets/Letter+Recognition} \\
-and was a part of an article "Letter Recognition Using Holland-style Adaptive Classifier" available on website: \\
+and was a part of an article "Letter Recognition Using Holland-style Adaptive
+Classifier" available on website: \\
 \url{http://link.springer.com/article/10.1007/BF00114162} \\
 \\
 \noindent
@@ -22,5 +30,34 @@ variations of Holland-style adaptive classifier systems to learn to
 correctly guess the letter categories associated with vectors of 16
 integer attributes extracted from raster scan images of the letters.
 The best accuracy obtained was a little over 80\%.
-We typically train on the first 16000 items and then use the resulting model to predict the letter category for the remaining 4000. See the article cited above for more details.
+We typically train on the first 16000 items and then use the resulting model
+to predict the letter category for the remaining 4000. See the article cited
+above for more details.
+
+\section*{Data analysis}
+\begin{itemize}
+\item The aim of our future machine learning algorithm working on data set is
+classification, that is to assign a set of values (our data record) to a
+capital letter in the English alphabet. It will be probably implemented as
+some kind of neural network. Classification is a hard problem for a letter
+recognition, because there is no direct algorithm of doing that, what is the
+reason for implementing artificial intelligence based on neural network.
+\item Clustering groups similar characters together, what can be implemented on
+our data using some sort of N dimensional metric, for example Euclidean or
+another appropriate similarity measure for records describing letters.
+\item Association rule discovery will be considered here as a way of predicting
+a probable value of other attribute values basing on some which are known.
+We will try to find a set of rules which can tell us a range the other values
+will be in or the most likely value. For example:
+$$
+\{ x = 5, y = 6 \} \Rightarrow z \in [-1,1]
+$$
+or
+$$
+\{ x = 1, y = 4, z = 5 \} \Rightarrow letter = "a" or "e"
+$$
+\item Anomaly detection is used to identify records corresponding to a particular
+letter with a significant deviation in some or all attributes. It will be helpful
+to identify unusual patterns of some letters.
+\end{itemize}
 
