@@ -1,81 +1,33 @@
-\subsection{Algorytm}
-Na wejściu algorytmu zostanie podany graf w formacie przedstawionym w pkt. 4. 
-\\Następujący pseudokod prezentuje przebieg algorytmu:
-\begin{description}
+\chapter*{Attributes}
 
-	\item[Pseudokod] \hfill
-	\begin{enumerate}[1.]
-		\item Wczytaj graf G
-		\item Utwórz algorytmem Kruskala minimalne drzewo rozpinające:
-			\begin{enumerate}[A.]
-				\item Utwórz las $L$ z wierzchołków grafu $G$ – każdy wierzchołek jest na początku osobnym drzewem.
-				\item Utwórz zbiór $S$ zawierający wszystkie krawędzie grafu $G$.
-				\item Uporządkuj zbiór $S$\ w kolejności rosnącej.
-				\item Dopóki $S$ nie jest pusty:
-					\begin{enumerate}[a.]
-						\item Pobierz krawędź o minimalnej wadze z $S$ i przypisz do $e$.
-						\item Jeśli $e$ łączy dwa różne drzewa:
-						\begin{enumerate}[i.]
-						 	\item dodaj $e$ do lasu $L$, tak aby połączyła dwa odpowiadające drzewa w jedno.
-						\item Jeśli $L$ jest drzewem rozpinającym idź do kroku 3.
-						 \end{enumerate}
-					\end{enumerate}
-			\end{enumerate}
-		\item przejdź drzewo $L$ i utwórz z niego cykl Hamiltona
-			\begin{enumerate}[A.]
-				\item $root$ := wybierz korzeń drzewa $L$.
-				\item $H$ = MetodaA(L, root).
-				\item dodaj krawędź od ostatniego wierzchołka do korzenia grafu $H$.
-			\end{enumerate}
-		\item zwróć rozwiązanie $H$
-	\end{enumerate}
 
-	\item[Opis funkcji pomocniczych] \hfill \\
-	Rozwiązaniem będziemy nazywać listę wierzchołków generowaną przez metody A i B, która wskazuje kolejność przechodzenia wierzchołków w drzewie.
-	\begin{description}
-	\item[Metoda A] \hfill \\ 
-	 Funkcja przechodzi przez podrzewo zaczynając w korzeniu $w$ i kończąc na jego dziecku.\\
-	 Rozwiązanie MetodaA(Wierzchołek $w$):
-	\begin{enumerate}[1.]
-		\item Jeśli drzewo o wierzchołku $w$ ma <= 3 wierzchołki:
-				\begin{enumerate}[A.]
-				\item zwróć przejście metodą A podstawowego grafu i zakończ.
-				\end{enumerate}
-		\item Utwórz puste rozwiązanie $r$.
-		\item Dla każdego dziecka $d$ wierzchołka $w$:
-			\begin{enumerate}[A.]
-			\item Dodaj do $r$ rozwiązanie znalezione przez $MetodaB(d)$.
-			\item Wierzchołek $n$ = pobierz następne dziecko wierzchołka $w$.
-			\item Jeśli $n$ nie jest puste:
-				\begin{enumerate}[a.]
-				\item Do $r$ dodaj pierwsze dziecko wierzchołka $n$ jeśli istnieje lub wierzchołek $n$.
-				\end{enumerate}
-			\end{enumerate}
-		\item Zwróć $r$.
-	\end{enumerate}
-	
-	\item[Metoda B] \hfill \\ 
-	Funkcja przechodzi przez podrzewo o korzeniu $w$ zaczynając na jego dziecka i kończąc na nim.\\
-	Rozwiązanie MetodaB(Wierzchołek $w$):
-	\begin{enumerate}[1.]
-		\item Jeśli drzewo o wierzchołku $w$ ma <= 3 wierzchołki:
-				\begin{enumerate}[A.]
-				\item zwróć przejście metodą B podstawowego grafu i zakończ.
-				\end{enumerate}
-		\item Utwórz puste rozwiązanie $r$.
-		\item Dla każdego dziecka $d$ wierzchołka $w$:
-			\begin{enumerate}[a.]
-			\item Dodaj do $r$ rozwiązanie znalezione przez $MetodaA(d)$.
-			\item Wierzchołek $n$ = pobierz następne dziecko wierzchołka $w$
-			\item Jeśli $n$ nie jest puste:
-				\begin{enumerate}[i.]
-				\item Do $r$ dodaj wierzchołek $n$ jeśli istnieje i idź do pkt. 4.
-				\end{enumerate}
-			\item Do $r$ dodaj wierzchołek $w$.
-			\end{enumerate}
-		\item Zwróć $r.$
-	\end{enumerate}
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+         \hline
+             No & Name & Description & Type \\ \hline
+             1. & lettr & capital letter             & discrete/nominal (A to Z)  \\ \hline
+             2. & x-box & horizontal position of box & discrete/ratio (integer)   \\ \hline
+             3. & y-box & vertical position of box   & discrete/ratio (integer)   \\ \hline
+             4. & width & width of box               & discrete/ratio (integer)   \\ \hline
+             5. & high  & height of box              & discrete/ratio (integer)   \\ \hline
+             6. & onpix & total \# on pixels         & discrete/ratio (integer)   \\ \hline
+             7. & x-bar & mean x of on pixels in box & discrete/ratio (integer)   \\ \hline
+             8. & y-bar & mean y of on pixels in box & discrete/ratio (integer)   \\ \hline
+             9. & x2bar & mean x variance            & discrete/ratio (integer)   \\ \hline
+            10. & y2bar & mean y variance            & discrete/ratio (integer)   \\ \hline
+            11. & xybar & mean x y correlation       & discrete/ratio (integer)   \\ \hline
+            12. & x2ybr & mean of $x * x * y$        & discrete/ratio (integer)   \\ \hline
+            13. & xy2br & mean of $x * y * y$        & discrete/ratio (integer)   \\ \hline
+            14. & x-ege & mean edge count left to right  & discrete/ratio (integer) \\ \hline
+            15. & xegvy & correlation of x-ege with y    & discrete/ratio (integer) \\ \hline
+            16. & y-ege & mean edge count bottom to top  & discrete/ratio (integer) \\ \hline
+            17. & yegvx & correlation of y-ege with x    & discrete/ratio (integer) \\
+         \hline
+    \end{tabular}
+    \caption{Table of attributes}
+\end{table}
 
-	\end{description}
 
-\end{description}
+
+
