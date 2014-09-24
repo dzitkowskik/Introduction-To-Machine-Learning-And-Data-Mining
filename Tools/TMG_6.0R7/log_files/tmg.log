@@ -1765,3 +1765,322 @@ Removed 0 elements using the local thresholds...
 Removed 0 empty terms...
 Removed 0 empty documents...
 =================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 19:19:33...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 91
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 29.7143
+Sparsity = 19.1523%
+
+Estimated time for parsing and converting the files: 0.069088 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.298739 seconds 
+
+Removed 17 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 19:19:56...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 91
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 29.7143
+Sparsity = 19.1523%
+
+Estimated time for parsing and converting the files: 0.003262 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.049811 seconds 
+
+Removed 17 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 19:27:17...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			-nostoplist
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 91
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 29.7143
+Sparsity = 19.1523%
+
+Estimated time for parsing and converting the files: 0.066094 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.436705 seconds 
+
+Removed 17 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 20:10:41...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 70
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 21.1429
+Sparsity = 18.3673%
+
+Estimated time for parsing and converting the files: 0.004096 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.086090 seconds 
+
+Removed 36 stopwords...
+Removed 2 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 20:11:03...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 70
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 21.1429
+Sparsity = 18.3673%
+
+Estimated time for parsing and converting the files: 0.002185 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.062511 seconds 
+
+Removed 36 stopwords...
+Removed 2 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 20:14:42...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 60
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 21.1429
+Sparsity = 19.2857%
+
+Estimated time for parsing and converting the files: 0.002887 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.104989 seconds 
+
+Removed 36 stopwords...
+Removed 10 terms using the stemming algorithm...
+Removed 2 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 20:15:07...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			no
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 70
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 21.1429
+Sparsity = 18.3673%
+
+Estimated time for parsing and converting the files: 0.002644 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.065083 seconds 
+
+Removed 36 stopwords...
+Removed 2 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
+==================================================================================================================================================================
+Running tmg (tmg_p.m) on 17-Sep-2014 20:15:24...
+Using the Perl implementation...
+Input File/Directory: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\textDocs.txt
+Delimiter: 				emptyline
+Line Delimiter: 			Yes
+Stoplist Filename: 			\Users\ghash\Programowanie\matlab\Introduction-To-Machine-Learning-And-Data-Mining\Data\stopWords.txt
+Update Step: 				10000
+Minimum Length: 			3
+Maximum Length: 			30
+Minimum Local Frequency: 		1
+Maximum Local Frequency: 		Inf
+Minimum Global Frequency: 		1
+Maximum Global Frequency: 		Inf
+Local Term Weighting Function: 		term frequency
+Global Term Weighting Function: 	none
+Using Normalization: 			no
+Using Stemming: 			yes
+Removing Numbers: 			no
+Removing Alphanumerics: 			no
+
+=================================================================================
+Results:
+=================================================================================
+Number of documents = 7
+Number of terms = 60
+Average number of terms per document (before the normalization) = 38.5714
+Average number of indexing terms per document = 21.1429
+Sparsity = 19.2857%
+
+Estimated time for parsing and converting the files: 0.002466 seconds
+Estimated time for constructing tdm and the other workspace parts: 0.063750 seconds 
+
+Removed 36 stopwords...
+Removed 10 terms using the stemming algorithm...
+Removed 2 terms using the term-length thresholds...
+Removed 0 terms using the global thresholds...
+Removed 0 elements using the local thresholds...
+Removed 0 empty terms...
+Removed 0 empty documents...
+=================================================================================
