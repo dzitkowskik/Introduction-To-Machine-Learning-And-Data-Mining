@@ -79,17 +79,44 @@ end
 
 %% Boxplot of each attribute for each class
 %we must divede it in two part for a better visualization 
-%{
+
 t=1;
-mfig('Boxplot per class'); clf;
-for c = 1:26
-    subplot(1,26,c,'align');
+mfig('Boxplot per class (1)'); clf;
+for c = 1:7
+    subplot(1,7,c);
     boxplot(A(t:(t-1)+cont(c),:), attributeNames, 'labelorientation', 'inline');   
     t=t+cont(c);
     title(classNames{c});    
 end
 linkax;
-%}
+
+mfig('Boxplot per class (2)'); clf;
+for c = 8:14
+    subplot(1,7,c-7);
+    boxplot(A(t:(t-1)+cont(c),:), attributeNames, 'labelorientation', 'inline');   
+    t=t+cont(c);
+    title(classNames{c});    
+end
+linkax;
+
+mfig('Boxplot per class (3)'); clf;
+for c = 15:21
+    subplot(1,7,c-14);
+    boxplot(A(t:(t-1)+cont(c),:), attributeNames, 'labelorientation', 'inline');   
+    t=t+cont(c);
+    title(classNames{c});    
+end
+linkax;
+
+mfig('Boxplot per class (4)'); clf;
+for c = 22:26
+    subplot(1,5,c-21);
+    boxplot(A(t:(t-1)+cont(c),:), attributeNames, 'labelorientation', 'inline');   
+    t=t+cont(c);
+    title(classNames{c});    
+end
+linkax;
+
 
 %{ 
 Scatter Plots
@@ -154,7 +181,7 @@ ylabel('PC 2');
 title('PCA of letters data');
 
 mfig('Letters: PCA 3D'); clf; hold all; 
-for c = 1:C
+for c = 1:3
     plot3(Z(strcmp(classlabel',classNames(c))==1,1), Z(strcmp(classlabel',classNames(c))==1,2),Z(strcmp(classlabel',classNames(c))==1,3),'.');
 end
 legend(classNames);
