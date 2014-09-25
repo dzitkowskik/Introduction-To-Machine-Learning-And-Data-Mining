@@ -4,7 +4,9 @@ clc
 %
 %%
 % Load Matlab data file and extract variables of interest
-mat_data = load('../project1/letter.mat')
+cdir = fileparts(mfilename('fullpath')); 
+fileName = fullfile(cdir,'../project_1/letter.mat');
+mat_data = load(fileName)
 %%
 X = mat_data.X;
 A = mat_data.A;
