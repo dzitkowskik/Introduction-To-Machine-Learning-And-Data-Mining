@@ -186,11 +186,10 @@ zlabel('PC 3');
 title('PCA of letters data');
 
 
+%%
 
 %% TODO: WHAT ABOUT THAT? FOR EXAMPLE WHERE IS K?
    
-
-
 % Visualize the reconstructed data from the firts K principal components
 
 % mfig('Digits: Reconstruction'); clf;
@@ -210,11 +209,10 @@ title('PCA of letters data');
 % end
 % colormap(1-gray);
 % 
-
-
-
-% Visualize the pricipal components
-
+% 
+% 
+% % Visualize the pricipal components
+% 
 % mfig('Digits: Principal components'); clf;
 % for k = 1:K
 %     N1 = ceil(sqrt(K)); N2 = ceil(K/N1);
