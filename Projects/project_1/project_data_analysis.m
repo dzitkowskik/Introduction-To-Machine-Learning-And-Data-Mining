@@ -58,12 +58,15 @@ end
 linkax('y'); % Makes the y-axes equal for improved readability
 
 %% BOX PLOT of each attribute
-mfig('Boxplot'); clf;
+mfig('Letters: Boxplot attributes'); clf;
 boxplot(X, attributeNames);
 %mfig('Boxplot1'); clf;
 %boxplot(X(:,1:8), attributeNames(1:8));
 %mfig('Boxplot2'); clf;
 %boxplot(X(:,9:16), attributeNames(9:16));
+%BOX PLOT standardized
+%mfig('Letters: Boxplot (standardized) attributes');
+%boxplot(zscore(X), attributeNames, 'LabelOrientation', 'inline');
 
 %{ 
 t=cont(1);
@@ -73,13 +76,12 @@ for i=2:26
     t=t+cont(i);
 end
 %repeat this code for each attribute 
-%mfig('Boxplot1'); clf; hold all;
-%boxplot(A(:,1)', group );
+mfig('Boxplot1'); clf; hold all;
+boxplot(A(:,1)', group );
 %}
 
 %% Boxplot of each attribute for each class
 %we must divede it in two part for a better visualization 
-
 t=1;
 mfig('Boxplot per class (1)'); clf;
 for c = 1:7
@@ -117,7 +119,6 @@ for c = 22:26
 end
 linkax;
 
-
 %{ 
 Scatter Plots
 M=16;
@@ -137,7 +138,7 @@ end
 legend(classNames);
 %}
 
-
+%% PCA
 % Subtract the mean from the data
 Y = bsxfun(@minus, X, mean);
 
@@ -151,7 +152,7 @@ Z = U*S;
 rho = diag(S).^2./sum(diag(S).^2);
 
 %% Plot variance explained
-mfig('Digits: Var. explained'); clf;
+mfig('Letters: Var. explained'); clf;
 plot(rho, 'o-');
 title('Variance explained by principal components');
 xlabel('Principal component');
@@ -160,16 +161,15 @@ ylabel('Variance explained value');
 x=1:1:16
 [COEFF SCORE LATENT] = princomp(X);
 CV=cumsum(var(SCORE)) / sum(var(SCORE));
-mfig('cumulative variance'); clf;
+mfig('Letters: Cumulative Variance'); clf;
 plot(x,CV, 'o-');
 grid on
 title('Cumulative variance explained by principal components');
 xlabel('Principal component');
 ylabel('Total Variance');
 
-
-
 %% Plot PCA of data
+% first 2 principal components
 mfig('Letters: PCA'); clf; hold all; 
 C = length(classNames);
 for c = 1:C
@@ -180,6 +180,7 @@ xlabel('PC 1');
 ylabel('PC 2');
 title('PCA of letters data');
 
+% first 3 principal components
 mfig('Letters: PCA 3D'); clf; hold all; 
 for c = 1:3
     plot3(Z(strcmp(classlabel',classNames(c))==1,1), Z(strcmp(classlabel',classNames(c))==1,2),Z(strcmp(classlabel',classNames(c))==1,3),'.');
@@ -190,35 +191,4 @@ xlabel('PC 1');
 ylabel('PC 2');
 zlabel('PC 3');
 title('PCA of letters data');
-%{
-%% Visualize the reconstructed data from the firts K principal components
-mfig('Digits: Reconstruction'); clf;
-W = Z(:,1:K)*V(:,1:K)';
-D = length(nD);
-for d = 1:D
-    subplot(2,D,d);
-    I = reshape(X(nD(d),:), [16,16])';
-    imagesc(I);
-    axis image off
-    title('Original');
-    subplot(2,D,d+D);
-    I = reshape(W(nD(d),:)+mean(X), [16,16])';
-    imagesc(I);
-    axis image off
-    title('Reconstructed');
-end
-colormap(1-gray);
 
-%% Visualize the pricipal components
-mfig('Digits: Principal components'); clf;
-for k = 1:K
-    N1 = ceil(sqrt(K)); N2 = ceil(K/N1);
-    subplot(N2, N1, k);
-    W = U(:,k)*V(:,k)';
-    I = reshape(W(k,:), [16,16])';
-    imagesc(I);
-    colormap(hot);
-    axis image off
-    title(sprintf('PC %d',k));
-end
-%}
