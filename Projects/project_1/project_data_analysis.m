@@ -45,9 +45,13 @@ Z = U*S;
 % Compute variance explained
 rho = diag(S).^2./sum(diag(S).^2);
 
+% Compute PCA
 x=1:1:16;
 [COEFF, SCORE, LATENT] = princomp(X);
 CV=cumsum(var(SCORE)) / sum(var(SCORE));
+
+% Compute Correlation coefficients
+R = corrcoef(X)
 
 %% Visualization
 

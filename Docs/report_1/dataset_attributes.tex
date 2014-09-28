@@ -57,9 +57,9 @@ median, standard deviation, as given in the table below: \\
 
 \begin{table}[ht!]
     \centering
-    \begin{tabular}{|r|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
          \hline
-              & Mean & Variance & Median & Std \\ \hline
+             Attr & Mean & Variance & Median & Std \\ \hline
              x-box & 4.0236 &  3.6604 &  4.0000 &  1.9132 \\ \hline
              y-box & 7.0355 & 10.9201 &  7.0000 &  3.3046 \\ \hline
              width & 5.1219 &  4.0585 &  5.0000 &  2.0146 \\ \hline
@@ -84,4 +84,27 @@ All attributes have a range from 0 to 15, because they were normalized in that w
 and there is no missing or demaged values. Seach record (set of attributes) is
 describing one appearance of a letter. In the next section we will consider
 visualization of that data.
+
+\subsection*{Correlation}
+Computing a correlation coefficients of attributes showed that first 5 attributes
+are strongly correlated with each other while the others are not at all (values in
+a correlation matrix are close to 0).
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c}
+         \hline
+             Attribute & 1 & 2 & 3 & 4 & 5 & 6 & 7 & ... \\ \hline
+             1 & 1.0000  & 0,7578  & 0.8515 &  0.6728  & 0.6191  & -0.0326 & 0.0455  \\ \hline
+             2 & 0.7578  & 1.0000  & 0.6719 &  0.8232  & 0.5551  & 0.0457  & -0.0409 \\ \hline
+             3 & 0.8515  & 0.6720  & 1.0000 &  0.6602  & 0.7657  & 0.0620  & 0.0248  \\ \hline
+             4 & 0.6728  & 0.8232  & 0.6602 &  1.0000  & 0.6444  & 0.0420  & -0.0201 \\ \hline
+             5 & 0.6191  & 0.5551  & 0.7657 &  0.6444  & 1.0000  & 0.1392  & -0.0288 \\ \hline
+             6 & -0.0326 & 0.0457  & 0.0620 &  0.0428  & 0.1392  & 1.0000  & -0.3566 \\ \hline
+             7 & 0.0455  & -0.0409 & 0.0248 &  -0.0200 & -0.0288 & -0.3566 & 1.0000  \\ \hline
+             ... &  &  &  &  &  &  &  & ... \\ 
+    \end{tabular}
+    \caption{Correlation of Attributes}
+\end{table}
+
+
 
