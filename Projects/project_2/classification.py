@@ -22,7 +22,7 @@ class Data(object):
 
 
 class KNeighbors(object):
-    def __init__(self, max_k=10, internal_cross=5, p=2):
+    def __init__(self, max_k=30, internal_cross=5, p=2):
         self.max_k = max_k
         self.internal_cross = internal_cross
         self.p = p
@@ -41,7 +41,7 @@ class KNeighbors(object):
                 knclassifier = KNeighborsClassifier(n_neighbors=l+1, p=self.p)
                 knclassifier.fit(X_train, ravel(y_train))
                 y_est = knclassifier.predict(X_test)
-                inner_errors[j, l] =
+                inner_errors[j, l] = \
                 np.sum(ravel(y_est) != ravel(y_test)) / float(len(X_test))
             j += 1
         errors = sum(inner_errors, 0) / float(self.internal_cross)
