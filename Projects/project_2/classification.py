@@ -22,7 +22,7 @@ class Data(object):
 
 
 class KNeighbors(object):
-    def __init__(self, max_k=30, internal_cross=5, p=2):
+    def __init__(self, max_k=8, internal_cross=4, p=2):
         self.max_k = max_k
         self.internal_cross = internal_cross
         self.p = p
@@ -42,21 +42,22 @@ class KNeighbors(object):
                 knclassifier.fit(X_train, ravel(y_train))
                 y_est = knclassifier.predict(X_test)
                 inner_errors[j, l] = \
-                np.sum(ravel(y_est) != ravel(y_test)) / float(len(X_test))
+                    np.sum(ravel(y_est) != ravel(y_test)) / float(len(X_test))
             j += 1
         errors = sum(inner_errors, 0) / float(self.internal_cross)
+        print "error rates: ", errors
         return errors.argmin() + 1
 
-    def run(self, fold, X_train, y_train, X_test, y_test):
-        # print('KNeighbors Crossvalidation fold: {0}'.format(fold+1))
+    def run(self, X_train, y_train, X_test, y_test):
         best_k = self.__get_best_k(X_train, y_train)
+        print "besk k: ", best_k
         knclassifier = KNeighborsClassifier(n_neighbors=best_k, p=2)
         knclassifier.fit(X_train, ravel(y_train))
         y_est = knclassifier.predict(X_test)
         return np.sum(ravel(y_est) != ravel(y_test)) / float(len(X_test))
 
-    def __call__(self, fold, X_train, y_train, X_test, y_test):
-        return self.run(fold, X_train, y_train, X_test, y_test)
+    def __call__(self, X_train, y_train, X_test, y_test):
+        return self.run(X_train, y_train, X_test, y_test)
 
 
 def main():
@@ -76,11 +77,11 @@ def main():
         y_test = data.y[test_index, :]
         responses[i, 0] = pool.apply_async(
             k_neighbours,
-            args=(i, X_train, y_train, X_test, y_test)
+            args=(X_train, y_train, X_test, y_test)
             )
         i += 1
     errors[0] = map((lambda x: responses[x, 0].get()), range(0, K))
-    print errors
+    print "k-neighbours error rates: \n", "\t\t", errors
     pool.close()
     pool.join()
     return
