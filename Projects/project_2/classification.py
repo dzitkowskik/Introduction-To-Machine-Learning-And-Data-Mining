@@ -54,8 +54,10 @@ class KNeighbors(object):
                     np.sum(ravel(y_est) != ravel(y_test)) / float(len(X_test))
             j += 1
         errors = sum(inner_errors, 0) / float(self.internal_cross)
+
         print "error rates: ", errors
         sys.stdout.flush()
+
         return errors.argmin() + 1
 
     def run(self, fold, X_train, y_train, X_test, y_test):
@@ -63,7 +65,10 @@ class KNeighbors(object):
         knclassifier = KNeighborsClassifier(n_neighbors=best_k, p=2)
         knclassifier.fit(X_train, ravel(y_train))
         y_est = knclassifier.predict(X_test)
+
         print "KNeighbors fold ", fold, " done!"
+        sys.stdout.flush()
+
         return np.sum(ravel(y_est) != ravel(y_test)) / float(len(X_test))
 
     def __call__(self, fold, X_train, y_train, X_test, y_test):
@@ -98,6 +103,8 @@ class NaiveBayes(object):
         y_est = le.inverse_transform(result)
 
         print "KNeighbors fold ", fold, " done!"
+        sys.stdout.flush()
+        
         error_sum = np.sum(ravel(y_est) != ravel(y_test))
         return error_sum / float(len(X_test))
 
