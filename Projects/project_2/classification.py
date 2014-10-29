@@ -13,6 +13,13 @@ from sklearn.cross_validation import StratifiedKFold
 from sklearn import preprocessing
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
+import neurolab as nl
+import random
+
+
+def get_a_subset(X, y, sample_size):
+    subset = random.sample(xrange(X.shape[0]), sample_size)
+    return X[subset, :], y[subset, :]
 
 
 class Data(object):
@@ -82,14 +89,16 @@ class NaiveBayes(object):
         self.internal_cross = internal_cross
 
     def run(self, fold, X_train, y_train, X_test, y_test):
-        nb_classifier = MultinomialNB(alpha=self.alpha, fit_prior=self.est_prior)
+        nb_classifier = MultinomialNB(
+            alpha=self.alpha,
+            fit_prior=self.est_prior)
         le = preprocessing.LabelEncoder()
-        le.fit_transform(ravel(y_train))
+        y = le.fit_transform(ravel(y_train))
 
         feature_selector = RFECV(
             estimator=nb_classifier,
             step=1,
-            cv=StratifiedKFold(ravel(y_train), self.internal_cross),
+            cv=StratifiedKFold(ravel(y), self.internal_cross),
             scoring='accuracy'
             )
 
@@ -98,15 +107,90 @@ class NaiveBayes(object):
             ('classification', nb_classifier)
             ])
 
-        classifier.fit(X_train, le.transform(ravel(y_train)))
+        classifier.fit(X_train, y)
         result = classifier.predict(X_test)
         y_est = le.inverse_transform(result)
 
-        print "KNeighbors fold ", fold, " done!"
-        sys.stdout.flush()
-        
         error_sum = np.sum(ravel(y_est) != ravel(y_test))
         return error_sum / float(len(X_test))
+
+    def __call__(self, fold, X_train, y_train, X_test, y_test):
+        return self.run(fold, X_train, y_train, X_test, y_test)
+
+
+class NeuralNetwork(object):
+    def __init__(self, internal_cross=2, layers=1, n_train=6, sample_size=800):
+        self.layers = layers
+        self.internal_cross = internal_cross
+        self.n_train = n_train
+        self.sample_size = sample_size
+
+    def __get_best_NN(self, X, y):
+        X, y = get_a_subset(X, y, self.sample_size)
+        n = X.shape[0]
+        le = preprocessing.LabelEncoder()
+        le.fit_transform(ravel(y))
+        y = np.matrix(le.transform(ravel(y))).T
+        cv = cross_validation.KFold(n, self.internal_cross)
+        # Create n_train random neural networks
+        ann = {}
+        n_units = [26, 1]
+        for i in range(self.n_train):
+            ann[i] = nl.net.newff([[0.0, 15.0]]*17, n_units)
+
+        # Use internal cross validation on that networks
+        j = 0
+        inner_errors = np.zeros((self.internal_cross, self.n_train))
+        for train_index, test_index in cv:
+            X_train = X[train_index, :]
+            y_train = (y[train_index, :] / 12.5) - 1.0
+            X_test = X[test_index, :]
+            y_test = y[test_index, :]
+            n_tests = float(y_test.shape[0])
+
+            for i in range(self.n_train):
+                train_error = ann[i].train(
+                    X_train,
+                    y_train,
+                    goal=0.0001,
+                    epochs=400,
+                    show=20)
+                # print "Train error ", j, " ", i, " = ", train_error[-1]
+                # sys.stdout.flush()
+                result = ravel(ann[i].sim(X_test))
+                y_est = map((lambda x: int(round((x + 1.0) * 12.5))), result)
+                # print ravel(y_est)
+                # print ravel(y_test)
+                test_error = (ravel(y_est) != ravel(y_test)).sum() / n_tests
+                inner_errors[j, i] = test_error
+                print "Test error ", j, " ", i, " = ", test_error
+                # sys.stdout.flush()
+            j += 1
+        print "Inner errors", inner_errors
+        errors = sum(inner_errors, 0) / float(self.internal_cross)
+        print "Errors ", errors
+        sys.stdout.flush()
+        return ann[errors.argmin()], le
+
+    def run(self, fold, X_train, y_train, X_test, y_test):
+        best_nn, le = self.__get_best_NN(X_train, y_train)
+        y_train_new = np.matrix(le.transform(ravel(y_train))).T
+        y_train_new /= 12.5
+        y_train_new -= 1
+        print y_train_new
+        best_nn.train(
+            X_train,
+            y_train_new,
+            goal=0.0001,
+            epochs=800,
+            show=10)
+
+        y = le.transform(ravel(y_test))
+        result = best_nn.sim(X_test)
+        y_est = map((lambda x: int(round(x*25.0))), result)
+        test_error = (ravel(y_est) != ravel(y)).sum()/float(X_test.shape[0])
+        print "NN test error: ", test_error
+        sys.stdout.flush()
 
     def __call__(self, fold, X_train, y_train, X_test, y_test):
         return self.run(fold, X_train, y_train, X_test, y_test)
@@ -115,11 +199,12 @@ class NaiveBayes(object):
 def main():
     np.set_printoptions(edgeitems=7)
     data = Data()
-    K = 10  # K-fold crossvalidation
-    N = 2  # number of classification algorithms
+    K = 2  # K-fold crossvalidation
+    N = 3  # number of classification algorithms
     CV = cross_validation.KFold(data.N, K)
     k_neighbours = KNeighbors()
     naive_bayes = NaiveBayes()
+    nn = NeuralNetwork()
     errors = np.zeros((N, K))
     pool = Pool(K*N)
     responses = {}
@@ -129,6 +214,10 @@ def main():
         y_train = data.y[train_index, :]
         X_test = data.X[test_index, :]
         y_test = data.y[test_index, :]
+
+        nn.run(i, X_train, y_train, X_test, y_test)
+        exit()
+
         responses[i, 0] = pool.apply_async(
             k_neighbours,
             args=(i, X_train, y_train, X_test, y_test)
@@ -137,11 +226,20 @@ def main():
             naive_bayes,
             args=(i, X_train, y_train, X_test, y_test)
             )
+        responses[i, 2] = pool.apply_async(
+            nn,
+            args=(i, X_train, y_train, X_test, y_test)
+            )
         i += 1
     errors[0] = map((lambda x: responses[x, 0].get()), range(0, K))
     errors[1] = map((lambda x: responses[x, 1].get()), range(0, K))
-    print "k-neighbours error rates: \n", "\t\t", errors[0], "\naverage: ", np.average(errors[0])
-    print "naive bayes error rates: \n", "\t\t", errors[1], "\naverage: ", np.average(errors[1])
+    errors[2] = map((lambda x: responses[x, 2].get()), range(0, K))
+    a0 = np.average(errors[0])
+    a1 = np.average(errors[1])
+    a2 = np.average(errors[2])
+    print "k-neighbours error rates: \n\t", errors[0], "\naverage: ", a0
+    print "naive bayes error rates: \n\t", errors[1], "\naverage: ", a1
+    print "Neural network error rates: \n\t", errors[2], "\naverage: ", a2
     pool.close()
     pool.join()
     return
