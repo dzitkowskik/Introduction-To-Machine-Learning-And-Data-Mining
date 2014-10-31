@@ -11,7 +11,7 @@ import numpy as np
 
 
 class NeuralNetwork(object):
-    def __init__(self, inner_cross=3, min_hu=10, max_hu=30, epochs=200):
+    def __init__(self, inner_cross=3, min_hu=26, max_hu=36, epochs=100):
         self.inner_cross = inner_cross
         self.min_hu = min_hu
         self.max_hu = max_hu

@@ -41,8 +41,11 @@ class NaiveBayes(object):
         result = classifier.predict(X_test)
         y_est = le.inverse_transform(result)
 
-        error_sum = np.sum(ravel(y_est) != ravel(y_test))
-        return error_sum / float(len(X_test))
+        grid_scores = feature_selector.grid_scores_
+        print "NB grid scores: ", grid_scores
+
+        error = np.sum(ravel(y_est) != ravel(y_test)) / float(len(X_test))
+        return error
 
     def __call__(self, fold, X_train, y_train, X_test, y_test):
         return self.run(fold, X_train, y_train, X_test, y_test)

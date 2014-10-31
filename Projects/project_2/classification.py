@@ -12,7 +12,7 @@ from sklearn import cross_validation
 def main():
     np.set_printoptions(edgeitems=7)
     data = ClassificationData()
-    K = 4  # K-fold crossvalidation
+    K = 10  # K-fold crossvalidation
     N = 3  # number of classification algorithms
     CV = cross_validation.KFold(data.N, K, shuffle=True)
     k_neighbours = KNeighbors()

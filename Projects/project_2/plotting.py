@@ -5,9 +5,9 @@ from pylab import *
 
 class Results(object):
     def __init__(self):
-        self.NN_error_rates = [0.3488, 0.375, 0.4164, 0.359]
+        self.NN_error_rates = [0.3488, 0.3750, 0.4164, 0.3590]
         self.NaiveBayes_error_rates = [0.4482, 0.4598, 0.4388, 0.4564]
-        self.KNeighbors_error_rates = [0.0422, 0.0422, 0.0434, 0.046]
+        self.KNeighbors_error_rates = [0.0422, 0.0422, 0.0434, 0.0460]
         self.NN_inner_errors = \
 [[49.85, 50.38, 43.31, 44.81, 41.79, 43.50, 43.91, 42.70, 40.87, 40.93, 39.55,
 38.97, 42.43, 38.94, 41.56, 38.81, 39.45, 41.27, 40.37, 40.01, 39.00],
@@ -20,6 +20,19 @@ class Results(object):
 [ 0.054, 0.072, 0.057, 0.060, 0.060, 0.065, 0.066, 0.066],
 [ 0.052, 0.070, 0.059, 0.060, 0.059, 0.064, 0.064, 0.068],
 [ 0.054, 0.070, 0.059, 0.062, 0.059, 0.063, 0.065, 0.068]]
+        self.NB_accuracy = \
+[[0.05216673, 0.16948604, 0.24898836, 0.25140338, 0.28592436, 0.32241157,
+  0.37448850, 0.38556729, 0.40723945, 0.49348714, 0.54339751, 0.54230951,
+  0.58813333, 0.64012797, 0.67138812, 0.68439432, 0.69272644],
+[ 0.05224987, 0.15850133, 0.25857634, 0.25615460, 0.28083587, 0.33483017,
+  0.38749620, 0.39399696, 0.41516605, 0.50115237, 0.55364912, 0.56032562,
+  0.59997923, 0.64304627, 0.67055997, 0.68157238, 0.69399156],
+[ 0.05091669, 0.13808696, 0.22633516, 0.24582184, 0.27731407, 0.33059129,
+  0.38232362, 0.39315975, 0.40966108, 0.49765200, 0.54765119, 0.54889828,
+  0.59189645, 0.64331373, 0.66114720, 0.67423677, 0.68465545],
+[ 0.05083359, 0.13524413, 0.23798838, 0.25756984, 0.27875229, 0.31883491,
+  0.38307887, 0.39224431, 0.40891974, 0.49733538, 0.54499315, 0.54741040,
+  0.58382421, 0.63990547, 0.65765351, 0.66924905, 0.68016717]]
 
 def main():
     print Results().NN_inner_errors
@@ -27,14 +40,33 @@ def main():
 if __name__ == '__main__':
     results = Results()
 
-    a = [results.NN_error_rates, results.NaiveBayes_error_rates, results.KNeighbors_error_rates]
-    np.savetxt("error_rates.csv", np.matrix(a), delimiter=' & ', fmt='%2.2f', newline=' \\\\\n')
+    labels = ['Algorithm', 'Cross 1', 'Cross 2', 'Cross 3', 'Cross 4', 'Average']
+    NN_error_rates = np.concatenate((['Neural Network'], results.NN_error_rates, [0.3748]))
+    NaiveBayes_error_rates = np.concatenate((['Naive Bayes'], results.NaiveBayes_error_rates, [0.4508]))
+    KNeighbors_error_rates = np.concatenate((['K-Neighbors'], results.KNeighbors_error_rates, [0.0435]))
+    a = [labels, NN_error_rates, NaiveBayes_error_rates, KNeighbors_error_rates]
+    np.savetxt("error_rates.csv", a, delimiter=' & ', fmt='%s', newline=' \\\\\n')
 
     figure(1)
+    xlabel('K')
+    ylabel('Error rate')
+    title('K-Neighbors value of K vs error')
     for i in range(0,4):
-        plot(range(1,9), results.KNeighbors_inner_errors[i-1])
+        plot(
+            range(1,9),
+            results.KNeighbors_inner_errors[i-1],
+            linewidth=2.0,
+            label='Cross '+str(i))
+    legend(loc='lower right')
     show()
 
+    internal_errors = np.average(results.NN_inner_errors, 0) / 100.0
+    figure(2)
+    xlabel('Number of hidden nodes')
+    ylabel('Average error rate (4 cross validation)')
+    title('Neural network hidden nodes vs error')
+    plot(range(10,31), internal_errors, color='r', linewidth=2.0)
+    show()
 
     N = 4
     ind = np.arange(N)  # the x locations for the groups
@@ -67,3 +99,15 @@ if __name__ == '__main__':
     autolabel(rects3)
 
     plt.show()
+
+    grid_scores = results.NB_accuracy
+    it = range(1, len(grid_scores[0]) + 1)
+    figure(3)
+    xlabel("Naive Bayes - number of features selected")
+    ylabel("Cross validation score (accuracy)")
+    plot(it, grid_scores[0], color='r', linewidth=2.0, label='Cross 1')
+    plot(it, grid_scores[1], color='g', linewidth=2.0, label='Cross 2')
+    plot(it, grid_scores[2], color='b', linewidth=2.0, label='Cross 3')
+    plot(it, grid_scores[3], color='y', linewidth=2.0, label='Cross 4')
+    legend(loc='lower right')
+    show()
