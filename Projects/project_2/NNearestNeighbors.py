@@ -32,8 +32,7 @@ class KNeighbors(object):
 
         print "error rates: ", errors
         sys.stdout.flush()
-        
-        print "best k = ", errors.argmin()
+
         return errors.argmin() + 1
 
     def run(self, fold, X_train, y_train, X_test, y_test):

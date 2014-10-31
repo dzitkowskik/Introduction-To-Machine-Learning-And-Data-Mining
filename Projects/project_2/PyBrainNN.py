@@ -11,7 +11,7 @@ import numpy as np
 
 
 class NeuralNetwork(object):
-    def __init__(self, inner_cross=2, min_hu=10, max_hu=30, epochs=100):
+    def __init__(self, inner_cross=3, min_hu=10, max_hu=30, epochs=200):
         self.inner_cross = inner_cross
         self.min_hu = min_hu
         self.max_hu = max_hu
@@ -55,19 +55,24 @@ class NeuralNetwork(object):
                     verbose=False,
                     weightdecay=0.01)
 
-                trainer.trainEpochs(self.epochs / 10)
+                trainer.trainEpochs(10)
                 inner_errors[j, i] = percentError(
                     trainer.testOnClassData(dataset=DS_test),
                     DS_test['class'])
 
-            print "Inner errors [", j, "] ", inner_errors[j]
+                print "Inner errors [", j, "] ", inner_errors[j]
             j += 1
 
         errors = sum(inner_errors, 0) / float(self.inner_cross)
-        # print "Neural network error rates: ", errors
-        # sys.stdout.flush()
+
+        print "\nNeural network error rates: ", errors, "\n"
+        sys.stdout.flush()
+
         optimal_hu = self.min_hu + errors.argmin()
-        # print "best hidden layer neurons = ", optimal_hu
+
+        print "\nNN best hidden layer neurons = ", optimal_hu, "\n"
+        sys.stdout.flush()
+
         return optimal_hu
 
     def run(self, fold, X_train, y_train, X_test, y_test):

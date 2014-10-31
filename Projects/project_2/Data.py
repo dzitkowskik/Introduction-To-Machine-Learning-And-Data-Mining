@@ -7,7 +7,7 @@ import string
 
 
 class ClassificationData(object):
-    def __init__(self, file_path='letter.mat', sample_size=5000, ds_prop=0.25):
+    def __init__(self, file_path='letter.mat', sample_size=0, ds_prop=0.25):
         self.mat_data = loadmat('letter.mat')
         self.y = np.matrix(self.mat_data['classlabel'].T)
         self.X = np.matrix(self.mat_data['X'])
@@ -21,10 +21,10 @@ class ClassificationData(object):
         self.attributeNames = [u'Offset']+self.attributeNames
 
         # get a subset
-        subset = random.sample(xrange(self.X.shape[0]), sample_size)
-
-        self.X = self.X[subset, :]
-        self.y = self.y[subset, :]
+        if sample_size != 0:
+            subset = random.sample(xrange(self.X.shape[0]), sample_size)
+            self.X = self.X[subset, :]
+            self.y = self.y[subset, :]
 
         self.N, self.M = self.X.shape
 
