@@ -7,7 +7,7 @@ import string
 
 
 class ClassificationData(object):
-    def __init__(self, file_path='letter.mat', sample_size=0, ds_prop=0.25):
+    def __init__(self, file_path='letter.mat', sample_size=5000, ds_prop=0.25):
         self.mat_data = loadmat('letter.mat')
         self.y = np.matrix(self.mat_data['classlabel'].T)
         self.X = np.matrix(self.mat_data['X'])
