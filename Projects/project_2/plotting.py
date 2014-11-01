@@ -18,6 +18,8 @@ class Results(object):
 [0.429, 0.442, 0.467, 0.448, 0.456, 0.462, 0.444, 0.455, 0.440, 0.449]
         self.KNeighbors_error_rates_2 = \
 [0.035, 0.035, 0.045, 0.038, 0.040, 0.032, 0.045, 0.050, 0.049, 0.037]
+        self.BiggestClassPredictor = \
+[0.960, 0.959, 0.960, 0.955, 0.950, 0.958, 0.959, 0.957, 0.949, 0.951]
 
         self.NN_inner_errors = \
 [[49.85, 50.38, 43.31, 44.81, 41.79, 43.50, 43.91, 42.70, 40.87, 40.93, 39.55,
@@ -44,6 +46,7 @@ class Results(object):
 [ 0.05083359, 0.13524413, 0.23798838, 0.25756984, 0.27875229, 0.31883491,
   0.38307887, 0.39224431, 0.40891974, 0.49733538, 0.54499315, 0.54741040,
   0.58382421, 0.63990547, 0.65765351, 0.66924905, 0.68016717]]
+
 
 
 def main():
@@ -156,14 +159,23 @@ if __name__ == '__main__':
     NN_err = results.NN_error_rates_2
     NB_err = results.NaiveBayes_error_rates_2
     KN_err = results.KNeighbors_error_rates_2
+    BC_err = results.BiggestClassPredictor
     [tstval1, pvalue1] = stats.ttest_ind(NN_err, NB_err)
     [tstval2, pvalue2] = stats.ttest_ind(NN_err, KN_err)
     [tstval3, pvalue3] = stats.ttest_ind(NB_err, KN_err)
+
+    [tstval4, pvalue4] = stats.ttest_ind(NN_err, BC_err)
+    [tstval5, pvalue5] = stats.ttest_ind(KN_err, BC_err)
+    [tstval6, pvalue6] = stats.ttest_ind(NB_err, BC_err)
+
     print round(pvalue1, 9)
     val = [["Compared alg.", "t-test value", "p-value", "significantly"],
             ["NN vs NB", round(tstval1, 1), round(pvalue1, 4), pvalue1 < 0.05],
             ["NN vs KN", round(tstval2, 1), round(pvalue2, 4), pvalue2 < 0.05],
-            ["NB vs KN", round(tstval3, 1), round(pvalue3, 4), pvalue3 < 0.05]]
+            ["NB vs KN", round(tstval3, 1), round(pvalue3, 4), pvalue3 < 0.05],
+            ["BC vs NN", round(tstval4, 1), round(pvalue4, 4), pvalue4 < 0.05],
+            ["BC vs KN", round(tstval5, 1), round(pvalue5, 4), pvalue5 < 0.05],
+            ["BC vs NB", round(tstval6, 1), round(pvalue6, 4), pvalue6 < 0.05]]
 
     np.savetxt("ttest.csv", val, delimiter=' & ', fmt='%s', newline=' \\\\\n')
 

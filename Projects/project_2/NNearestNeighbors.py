@@ -7,7 +7,7 @@ from sklearn import preprocessing
 
 
 class KNeighbors(object):
-    def __init__(self, max_k=8, internal_cross=4, p=2):
+    def __init__(self, max_k=20, internal_cross=4, p=2):
         self.max_k = max_k
         self.internal_cross = internal_cross
         self.p = p
