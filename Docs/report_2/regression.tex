@@ -12,7 +12,7 @@ Each $\textbf{x}_i $ corresponds to the set of attributes of the $i$-th observat
 Regression is the task of learning a target function $f$ that maps each attribute set $\textbf{x}$ into a continuous-valued output $y$. In particular, according to our dataset, the continuous-valued output corresponds to the letter index. 
 Thus, the goal for our  regression problem, is to find a target function, which describe the letter index, that can fit the input data with minimum error. The error function for a regression task will be expressed in terms of squared error.\\
 
-The idea is to set an index for each letter (for example $A=2, B=1 ... , Z = 25$) and then apply linear regression. 
+The idea is to set an index for each letter (for example $A=0, B=1 ... , Z = 25$) and then apply linear regression. 
 If we apply linear regression for the whole data set (consider all the letters, equal to 26 classes) that will never work, linear regression is simply not sufficiently flexible,for instance, to understand that the differences in pixel intensities in $a, b, c$ should result in $y = 1, 2, 3$. Suppose $x_a$ corresponds to the input of a and $x_c$ the input of c. Then suppose you have trained the weights $w$ such that:
 \begin{enumerate}
 \item []$1 = x_a * w$
@@ -30,7 +30,7 @@ That said, we are going to solve two different linear regression problem:
 \setcounter{section}{2}
 \subsection{Forward selection}
 
-We apply linear regression with forward selection considering a subset of data of two classes, where class 0 corresponds to the letter $A$ while class 1 corresponds to the letter $C$.Since our output are purely binary ($y \in {0,1}$), we use logit function which maps the output in the regression analysis to the range (0,1). To measure how well we can predict the the two letters, we will use the squared error between the true and the estimated error. In our estimation we  use two level of cross-validation. On the outer level, we use 5-fold cross-validation  to estimate the performance of our model computing the squared error averaged over 5 test sets. On the inner level, we use 10-fold cross-validation to perform sequential feature selection. Figure \ref{fig:r1} shows that the most commonly selected features for letter recognition are width, x-bar, x2bar, y2bar, xy2br, xegvy, yegvx.
+We apply linear regression with forward selection considering a subset of data of two classes, where class 0 corresponds to the letter $A$ while class 1 corresponds to the letter $C$. Since our output are purely binary ($y \in {0,1}$), we use logit function which maps the output in the regression analysis to the range (0,1). To measure how well we can predict the the two letters, we will use the squared error between the true and the estimated error. In our estimation we  use two level of cross-validation. On the outer level, we use 5-fold cross-validation  to estimate the performance of our model computing the squared error averaged over 5 test sets. On the inner level, we use 10-fold cross-validation to perform sequential feature selection. Figure \ref{fig:r1} shows that the most commonly selected features for letter recognition are width, x-bar, x2bar, y2bar, xy2br, xegvy, yegvx.
 
 
 \begin{figure}[htbp]
