@@ -120,7 +120,7 @@ We perform a pairwise $t$-test between the regularized linear regression model, 
 \end{verbatim}
 If we compare Linear regression vs ANN we note that the classifiers are NOT significantly different while if we compare linear regression vs predict average and ANN vs predict average it easy understand that the classifiers are significantly different. We can see the results also in Figure \ref{fig:c}.
 
-\begin{figure}[htbp]
+\begin{figure}[ht!]
         \center
        	\begin{subfigure}[a]{0.35\textwidth}
                 \includegraphics[width=4.8cm]{figures/c1}
@@ -139,7 +139,7 @@ If we compare Linear regression vs ANN we note that the classifiers are NOT sign
         \caption{Box-Plots: Permormace of the models one against the other}
         \label{fig:c}
 \end{figure}
-
+\clearpage
 \section{MULTI-CLASS LOGISTIC REGRESSION}
 We run multi-class classification data set which fits logistic regression models to the training data using the one-against-rest strategy (each classifier trained to predict one class label vs. the remaining). Next, it computes the outputs of the C classifiers on the test data and classifies it according to the highest output.
 Our goal is classify, using multi-class regression model, all the letter indexes. 
