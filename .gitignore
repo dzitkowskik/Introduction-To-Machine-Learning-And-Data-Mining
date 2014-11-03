@@ -1,1 +1,4 @@
 *.log
+*.pyc
+*.csv
+*.gz
