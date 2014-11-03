@@ -1,7 +1,7 @@
 %In this report we apply regression and classification to the "Letter Image Recognition" dataset
 \chapter*{Regression}
 \setcounter{chapter}{1}
-\section*{1.1 Problem}
+\section{Problem}
 \setcounter{section}{1}
 Let D denote our data set that contains N observations:
 \begin{center}
@@ -26,25 +26,27 @@ That said, we are going to solve two different linear regression problem:
 \item Applying 1 out of $K$ coding where $K=26$. We consider the one-against-rest scheme, where multiple classes are handled by decomposing the problem into $K$ binary problems, where $K$ is the number of classes. We train $K$ classifiers, each fitted to classify one class against the rest of the classes lumped together.
 \end {enumerate}
 
-\section*{TWO-CLASS LINEAR REGRESSION}
-
-\section*{1.2 Forward selection}
+\section{TWO-CLASS LINEAR REGRESSION}
 \setcounter{section}{2}
-We apply linear regression with forward selection considering a subset of data of two classes, where class 0 corresponds to the letter $A$ while class 1 corresponds to the letter $C$.Since our output are purely binary ($y \in {0,1}$), we use logit function which maps the output in the regression analysis to the range (0,1). To measure how well we can predict the the two letters, we will use the squared error between the true and the estimated error. In our estimation we  use two level of cross-validation. On the outer level, we use 5-fold cross-validation  to estimate the performance of our model computing the squared error averaged over 5 test sets. On the inner level, we use 10-fold cross-validation to perform sequential feature selection. Figure 1.1 shows that the most commonly selected features for letter recognition are width, x-bar, x2bar, y2bar, xy2br, xegvy, yegvx.
+\subsection{Forward selection}
+
+We apply linear regression with forward selection considering a subset of data of two classes, where class 0 corresponds to the letter $A$ while class 1 corresponds to the letter $C$.Since our output are purely binary ($y \in {0,1}$), we use logit function which maps the output in the regression analysis to the range (0,1). To measure how well we can predict the the two letters, we will use the squared error between the true and the estimated error. In our estimation we  use two level of cross-validation. On the outer level, we use 5-fold cross-validation  to estimate the performance of our model computing the squared error averaged over 5 test sets. On the inner level, we use 10-fold cross-validation to perform sequential feature selection. Figure \ref{fig:r1} shows that the most commonly selected features for letter recognition are width, x-bar, x2bar, y2bar, xy2br, xegvy, yegvx.
 
 
 \begin{figure}[htbp]
 \center
-\includegraphics[width = 0.9\textwidth]{figure_p2/r1.eps}
+\includegraphics[width = 0.9\textwidth]{figures/r1}
 \caption{Linear regression with forward selection, attributes selected for all folds}
+\label{fig:r1}
 \end{figure}
 
-The fold which requires the less number of feature for the linear regression is fold number 5. Figure 1.2 shows feature selection and crossvalidation error for the fold 5. We can see that the minimum squared error is reached with only six attributes.
+The fold which requires the less number of feature for the linear regression is fold number 5. Figure \ref{fig:r2} shows feature selection and crossvalidation error for the fold 5. We can see that the minimum squared error is reached with only six attributes.
 
 \begin{figure}[htbp]
 \center
-\includegraphics[width = 1.0\textwidth]{figure_p2/r2.eps}
+\includegraphics[width = 1.0\textwidth]{figures/r2}
 \caption{Feature selection and crossvalidation error for fold 5}
+\label{fig:r2}
 \end{figure}
 
 We also find that in almost all cases there is no significant performance improvement ($R^2$ test score) between selecting all the features and the features suggested by the feature selection:
@@ -64,76 +66,81 @@ Linear regression with sequential feature selection:
 However the feature selection allows to have a much simpler model with almost the same error performance.\\
 
 Plotting the residual error vs. the attributes can give some insight into whether including a transformation of a variable can improve the model. If the points in a residual plot are randomly dispersed around the horizontal axis, a linear regression model is appropriate for the data; otherwise, a non-linear model is more appropriate.
-Looking the residual plot in figure 1.3, it shows a random pattern which indicates a good fit for a linear model.
+Looking the residual plot in figure \ref{fig:r3}, it shows a random pattern which indicates a good fit for a linear model.
 In fact, if we include transformation of some variable (for example the square of an attribute) we checked that there is no significant performance improvement.
 
 \begin{figure}[htbp]
 \center
-\includegraphics[width = 1.1\textwidth]{figure_p2/r3.eps}
+\includegraphics[width = 1.1\textwidth]{figures/r3}
 \caption{Residual error vs. the attributes}
+\label{fig:r3}
 \end{figure}
 
-\section*{Attributes effects}
+\subsection{Attributes effects}
 Another approach to control for the complexity of the model is to regularize the parameters in the objective function. In linear regression we can regularize the parameter $\textbf{w}$ by the Frobenius norm. 
-We run linear regression with regularization for the letter index attribute, with external 5-fold cross-validation and internal 10 fold cross-validation for estimating the optimal lambda value. Figure 1.4 shows that the optimal lambda = $10^{-2}$, and how the attribute weights change due to regularization.
+We run linear regression with regularization for the letter index attribute, with external 5-fold cross-validation and internal 10 fold cross-validation for estimating the optimal lambda value. Figure \ref{fig:r5} shows that the optimal lambda = $10^{-2}$, and how the attribute weights change due to regularization.
 
 \begin{figure}[htbp]
 \center
-\includegraphics[width = 1.25\textwidth]{figure_p2/r5.eps}
+\includegraphics[width = 1.25\textwidth]{figures/r5}
 \caption{Linear regression with regularization,  attribute weights and optimal $\lambda$}
+\label{fig:r5}
 \end{figure}
 
-We calculate the average set of weights and we plot a bar chart to understand the contributions of the different attributes for the letter value [Figure 1.5]. We see again that in order x-bar, y2bar, xegvy, yegvx are the most significant predictors. 
+We calculate the average set of weights and we plot a bar chart to understand the contributions of the different attributes for the letter value (Figure \ref{fig:r6}). We see again that in order x-bar, y2bar, xegvy, yegvx are the most significant predictors. 
 
 \begin{figure}[htbp]
 \center
-\includegraphics[width = 1.25\textwidth]{figure_p2/r6.eps}
+\includegraphics[width = 1.25\textwidth]{figures/r6}
 \caption{Linear regression with regularization, attribute weights}
+\label{fig:r6}
 \end{figure}
 
 The squared errors scores however show no significant improvement between the non regularized and the regularized models.
 
-\section*{1.4 Artificial neural network}
+\subsection{Artificial neural network}
 We fit an artificial neural network (ANN) to the data. We perform a 5 fold cross-validation to select the number of hidden units hyper-parameter. For each fold, we try to fit an ANN 5 times, and we select the ANN which produces the lowest train error.
 Just using only one hidden units and one train of neural network we obtain very interesting results, indeed, in this case, the train error and test error are approximately equal to 0\% and 1\% respectively. Increasing the number of re-train the errors remain pretty the same while increasing the number of hidden nodes (for instance equal to six), the train error and test error decrease and they are approximately equal to 0\% and 0\% (0.16\%) respectively.
 
-Figure 1.5 describe an ANN with 16 inputs(attributes) and one hidden layer that we have chosen as model to fit our data.
+Figure \ref{fig:n1} describe an ANN with 16 inputs(attributes) and one hidden layer that we have chosen as model to fit our data.
 \begin{figure}[htbp]
 \center
-\includegraphics[width = 1.0\textwidth]{figure_p2/n1.eps}
+\includegraphics[width = 1.0\textwidth]{figures/n1}
 \caption{ANN with one hidden unit}
+\label{fig:n1}
 \end{figure}
 
 
-\section*{1.5 Comparison}
+\subsection{Comparison}
 We perform a pairwise $t$-test between the regularized linear regression model, the ANN with one hidden node, and a baseline model predicting the average of the output variable (letter $A$ or $C$). In order to compare the models we consider the error rate average of the five folds. 
 \begin{verbatim}
 - Error rate linear regression      0.9%
 - Error rate ANN                    1.1%
 - Error rate predict average        48.3%
 \end{verbatim}
-If we compare Linear regression vs ANN we note that the classifiers are NOT significantly different while if we compare linear regression vs predict average and ANN vs predict average it easy understand that the classifiers are significantly different. We can see the results also in Figure 1.7.
+If we compare Linear regression vs ANN we note that the classifiers are NOT significantly different while if we compare linear regression vs predict average and ANN vs predict average it easy understand that the classifiers are significantly different. We can see the results also in Figure \ref{fig:c}.
 
 \begin{figure}[htbp]
         \center
        	\begin{subfigure}[a]{0.35\textwidth}
-                \includegraphics[width=4.8cm]{figure_p2/c1.eps}
+                \includegraphics[width=4.8cm]{figures/c1}
                 \caption{Linear Regression vs ANN}
         \end{subfigure}%
         \begin{subfigure}[b]{0.35\textwidth}
-                \includegraphics[width=4.8cm]{figure_p2/c2.eps}
+                \includegraphics[width=4.8cm]{figures/c2}
                 \caption{Linear Regression vs Predict Average}
                  \end{subfigure} \\
 
          \begin{subfigure}[c]{0.35\textwidth}
                 \centering
-                \includegraphics[width=4.8cm]{figure_p2/c3.eps}
+                \includegraphics[width=4.8cm]{figures/c3}
                 \caption{ANN vs Predict Average}
         \end{subfigure}
         \caption{Box-Plots: Permormace of the models one against the other}
+        \label{fig:c}
 \end{figure}
 
-\section*{MULTI-CLASS LOGISTIC REGRESSION}
+\section{MULTI-CLASS LOGISTIC REGRESSION}
 We run multi-class classification data set which fits logistic regression models to the training data using the one-against-rest strategy (each classifier trained to predict one class label vs. the remaining). Next, it computes the outputs of the C classifiers on the test data and classifies it according to the highest output.
 Our goal is classify, using multi-class regression model, all the letter indexes. 
 
