@@ -3,6 +3,7 @@ import random
 from scipy.io import loadmat
 import string
 from sklearn import preprocessing
+from sklearn.decomposition import PCA
 
 
 class ClusteringData(object):
@@ -22,6 +23,15 @@ class ClusteringData(object):
             self.y = self.y[subset, :]
 
         self.N, self.M = self.X.shape
-        self.labels = list(string.ascii_uppercase)
-        self.le = preprocessing.LabelEncoder()
-        self.le.fit(self.labels)
+
+    @staticmethod
+    def get_label_encoder():
+        labels = list(string.ascii_uppercase)
+        le = preprocessing.LabelEncoder()
+        le.fit(labels)
+        return le
+
+    def transform_by_pca(self, n_comp):
+        reduced_data = PCA(n_components=n_comp).fit_transform(self.X)
+        self.X = reduced_data
+        self.N, self.M = self.X.shape
