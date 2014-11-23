@@ -28,8 +28,6 @@ def main():
         X_test = data.X[test_index, :]
         y_test = data.y[test_index, :]
 
-        k_neighbours.run(0, X_train, y_train, X_test, y_test)    
-
         responses[i, 0] = pool.apply_async(
             k_neighbours,
             args=(i, X_train, y_train, X_test, y_test)
