@@ -1,0 +1,5 @@
+%In this report we apply regression and classification to the "Letter Image Recognition" dataset
+\chapter*{Outlier / Anomaly detection}
+\setcounter{chapter}{3}
+
+We calculate for all the samples the leave-one-out Gaussian Kernel density, KNN density, KNN average relative density and distance to K-th nearest neighbor for with K=5.\\For each of the metrics, we sort the outlier scores and inspect their distribution. We set an outlier threshold where there is a significant ?jump? in the scores, in order to have around 40 outliers (about 8\% of the total samples). We consider only the outliers which are detected by all four methods, and this way we obtain 16 outliers (about 4\% of the samples).
