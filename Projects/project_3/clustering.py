@@ -138,9 +138,10 @@ class GmmClustering(object):
             j += 1
 
         scores = inner_scores.mean(axis=0)
-        print "Scores: ", scores
         optimal_n_component = self.min_n_comp + scores.argmax()
-        print "Optimal number of components: ", optimal_n_component
+        if self.verbose:
+            print "Scores: ", scores
+            print "Optimal number of components: ", optimal_n_component
         return optimal_n_component
 
     def __plot_2D(self, data, gmm, results, y_test):
@@ -240,7 +241,7 @@ class HierarchicalClustering(object):
             'kulsinski',
             'sokalsneath']
         self.available_methods = [
-            'single' ,
+            'single',
             'ward',
             'complete',
             'average',
@@ -313,11 +314,11 @@ def clustering(reduce=False, async_mode=True):
     if reduce:
         print "Data reduced by PCA with 2 dim!"
         data.transform_by_pca(2)
-    K = 2  # K-fold crossvalidation
+    K = 10  # K-fold crossvalidation
     N = 2  # number of clustering algorithms
     CV = cross_validation.KFold(data.N, K, shuffle=True)
-    gmm_clustering = GmmClustering()
-    hier_clustering = HierarchicalClustering()
+    gmm_clustering = GmmClustering(verbose=False)
+    hier_clustering = HierarchicalClustering(verbose=False)
     alg_names = ['GMM', 'Hierarchical']
     errors = np.zeros((N, K))
     pool = Pool(K*N)
@@ -354,7 +355,8 @@ def clustering(reduce=False, async_mode=True):
         else:
             errors[no] = map((lambda x: responses[x, no]), range(0, K))
         av[no] = np.average(errors[no])
-        print alg_names[no], " clustering scores: \n\t", errors[no], "\naverage: ", av[no]
+        print alg_names[no], " clustering scores: \n\t", \
+            errors[no], "\naverage: ", av[no]
 
     pool.close()
     pool.join()
