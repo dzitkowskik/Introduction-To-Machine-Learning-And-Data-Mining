@@ -309,7 +309,7 @@ class HierarchicalClustering(object):
         return self.run(fold, X_train, y_train, X_test, y_test)
 
 
-def clustering(reduce=False, async_mode=True):
+def clustering(reduce=True, async_mode=False):
     data = ClusteringData()
     if reduce:
         print "Data reduced by PCA with 2 dim!"
@@ -317,8 +317,8 @@ def clustering(reduce=False, async_mode=True):
     K = 10  # K-fold crossvalidation
     N = 2  # number of clustering algorithms
     CV = cross_validation.KFold(data.N, K, shuffle=True)
-    gmm_clustering = GmmClustering(verbose=False)
-    hier_clustering = HierarchicalClustering(verbose=False)
+    gmm_clustering = GmmClustering(verbose=True)
+    hier_clustering = HierarchicalClustering(verbose=True)
     alg_names = ['GMM', 'Hierarchical']
     errors = np.zeros((N, K))
     pool = Pool(K*N)
