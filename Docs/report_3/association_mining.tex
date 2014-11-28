@@ -1,0 +1,67 @@
+%In this report we apply regression and classification to the "Letter Image Recognition" dataset
+\chapter*{Association Mining}
+\setcounter{chapter}{2}
+Association rule learning is a popular and well researched method for discovering interesting relations between variables in large databases. We divide values of features into three categories: small values, medium values and high values and than we are going to do association mining for this three categories separately. So we have three different dataset and attributes are in set when they belong to that category. For instance if we consider the item set of smal values (from 1 to 4)
+  we binarize our data by transforming the value of each attribute to 1 if it belong to the interval [1-4], and 0 otherwise. The medium values are defined from 5 to 7 while   high values are defined from 8 to 16 and we binarized the data in the same way described above.
+  For each item set we apply Apriori algorithm in order to find possible associations among the attributes.
+  
+  The table below shows the best association rules found by the algorithm including its confidence percentage.
+
+\begin{center}
+    \begin{tabular}{ | p{6cm} | p{6cm} |}
+    \hline
+    RULE  & CONFIDENCE \\
+    \hline
+    \multicolumn{2}{|c|}{Assiociations for  HIGH  values of attributes (from  8  to  16 )} \\
+    \hline
+    xegvy $\rightarrow$ xy2br  & 62.96 \% \\ 
+    \hline
+    xy2br $\rightarrow$ xegvy & 74.62 \%\\ 
+    \hline
+    yegvx $\rightarrow$ xy2br & 72.00 \%\\ 
+    \hline
+    xy2br $\rightarrow$  yegvx & 72.64 \% \\ 
+    \hline
+    yegvx $\rightarrow$ xegvy & 76.39 \%\\ 
+    \hline
+     xegvy $\rightarrow$ yegvx & 65.03 \%\\ 
+    \hline
+     \multicolumn{2}{|c|}{Assiociations for  MEDIUM  values of attributes (from  4  to  7 )} \\
+    \hline
+    x2ybr $\rightarrow$ width  & 67.53 \% \\ 
+    \hline
+    width $\rightarrow$ x2ybr & 60.37 \%\\ 
+    \hline
+    width $\rightarrow$ x-box & 63.67 \%\\ 
+    \hline
+    x-box $\rightarrow$  width & 82.51 \% \\ 
+    \hline
+    high $\rightarrow$ width & 80.93 \%\\ 
+    \hline
+     width $\rightarrow$ high & 69.55\%\\ 
+    \hline
+       \multicolumn{2}{|c|}{Assiociations for  SMALL  values of attributes (from  1  to  4 )} \\
+    \hline
+    x-ege $\rightarrow$ onpix  & 76.01 \% \\ 
+    \hline
+    onpix $\rightarrow$ x-ege & 72.54 \%\\ 
+    \hline
+    y-ege $\rightarrow$ onpix & 78.07 \%\\ 
+    \hline
+    onpix $\rightarrow$  y-ege & 60.95 \% \\ 
+    \hline
+    onpix $\rightarrow$ x-box & 76.15 \%\\ 
+    \hline
+     x-box $\rightarrow$ onpix & 81.39 \%\\  %%
+    \hline
+     x-ege $\rightarrow$ x-box & 68.88 \%\\ 
+    \hline
+     x-box $\rightarrow$ x-ege & 70.25 \%\\  
+    \hline
+    \end{tabular}
+\end{center}
+
+In the first report we computed correlation between attributes and we found out that the strongest correlation was between x-box and width (corr=0.85). Thus the results of Apriori confirms the findings from the our previous analysis ,in fact, the association for  medium  values of attributes  x-box $\rightarrow$ width has the highest confidece.
+
+
+\end{document}
