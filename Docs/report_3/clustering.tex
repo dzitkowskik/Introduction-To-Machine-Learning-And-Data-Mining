@@ -1,68 +1,86 @@
 \chapter*{Clustering}
+We clustered our data containing letters with a set of their attributes using
+Gaussian Mixture Model as well as with Hierarchical clustering. We used
+cross-validation to estimate the optimal parameters for both algorithms. At
+the end we estimated the quality of both algorithms in terms of our true labels
+which are letters.
+
 
 \section{Gaussian Mixture Model (GMM)}
-Scores:  [ 0.13688014  0.13837407  0.14652024  0.15566729  0.16990819  0.16360413
-  0.16191632  0.18147025  0.18180734  0.18700313  0.19206037  0.17559811
-  0.18294911  0.18311791  0.17068671  0.21343687  0.18857869  0.18645952
-  0.19625636  0.20603556  0.17454899]
-
-Optimal number of components:  30
-GMM  clustering scores:
-  [ 31.  32.  28.  31.  34.  35.  30.  30.  27.  34.  31.  29.  25.  28.  35.
-  24.  34.  29.  34.  35.]
-average:  30.8
+For GMM algorithm we used double cross-validation to estimate the best number of
+components in internal loop and calculating quality score in external loop as
+an average of scores. We also applied Principal Component Analysis to visualize
+the results in more human friendly way. We used only a subset of our dataset for
+performance reasons, using random sampling. We can see the results in the figure
+\ref{fig:GMM}
+\begin{figure}[!tbh]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/GMM_pca_2_2}
+  \caption{GMM - clustered (data reduced using PCA)}
+  \label{fig:GMM}
+\end{figure}
+In an average the most optimal number of components choosed in internal
+cross-validation loop was 30. Which is a close to the number of actual classes.
+We can see how the quality of GMM clustering in terms of actual labels depends
+on the number of components in the figure \ref{fig:ami}
+\begin{figure}[!tbh]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/ami}
+  \caption{GMM - quality vs components count}
+  \label{fig:ami}
+\end{figure}
+Cluster centers should be in ideal case (especially if we consider number of
+components equal to the number of actual classes - 26) an average vector from
+the attribute vectors corresponding to particular letters. So the centroids
+should correspond to some ,,unified'' letters.
 
 \section{Hierarchical Clustering}
+We also used single cross-validation technique in Hierarchical Clustering and
+choose the best metric and linkage function from all available options. Score
+results are mesured for best performing option sets. We also used PCA to help
+visualize results (Figure~\ref{fig:hier_all} and Figure~\ref{fig:hier_pca}).
+\begin{figure}[!tbh]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/Hier_all_1}
+  \caption{Hierarchical clustering (without PCA reduction)}
+  \label{fig:hier_all}
+\end{figure}
+\begin{figure}[!tbh]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/Hier_pca_2_1}
+  \caption{Hierarchical clustering (data reduced using PCA)}
+  \label{fig:hier_pca}
+\end{figure}
+Even using first two principal components explaining the most variance, results
+are dyrastically worse than when we use all data dimensions. The most commonly
+choosed options by the program were ('ward', 'euclidean') which means that the
+ward linkage function and euclidean metric were most suitable for our data.
 
 \section{Evaluation}
-adjusted_mutual_info_score
+We choosed an adjusted mutual info score metric as our quality messure for
+clustering methods. For two clusterings U and V, the AMI is given as:
+$$ AMI(U, V) = [MI(U, V) - E(MI(U, V))] / [max(H(U), H(V)) - E(MI(U, V))] $$
+And has following properties:
+\begin{enumerate}
+\item Perfect labeling is scored 1.0
+\item Independent labelings have non-positive scores
+\item No assumption is made on the cluster structure
+\item It is symmetric
+\item It is independent of the absolute values of the labels: a permutation of
+      the class or cluster label values won’t change the score value in any way
+\item It accounts for the fact that the MI is generally higher for two
+      clusterings with a larger number of clusters, regardless of whether there
+      is actually more information shared
+\end{enumerate}
 
-1. Perfect labeling is scored 1.0:
-2. Independent labelings have non-positive scores
-3. No assumption is made on the cluster structure
-4. symmetric: switching label_true with label_pred will return the same score value
-5. independent of the absolute values of the labels: a permutation of the class or cluster label values won’t change the score value in any way
-6. It accounts for the fact that the MI is generally higher for two clusterings with a larger number of clusters, regardless of whether there is actually more information shared
-
-For two clusterings U and V, the AMI is given as:
-AMI(U, V) = [MI(U, V) - E(MI(U, V))] / [max(H(U), H(V)) - E(MI(U, V))]
-
-Number of observations:  250
-GMM  clustering scores:
-  [ 0.29303427  0.08789581  0.14795087  0.05944574  0.0413388   0.21912924]
-average:  0.141465788049
-Hierarchical  clustering scores:
-  [ 0.34748641  0.2337039   0.12479078  0.13924874  0.26758144  0.21382411]
-average:  0.221105896042
-
-Number of observations:  500
-GMM  clustering scores:
-  [ 0.07706534  0.09852529  0.17783623  0.29893703  0.21568002  0.24790863]
-average:  0.185992088034
-Hierarchical  clustering scores:
-  [ 0.07817525  0.24229839  0.21266489  0.32478356  0.27232638  0.25639827]
-average:  0.231107790736
-
-Number of observations:  1000
-GMM  clustering scores:
-  [ 0.28986683  0.22811     0.14698312  0.19094801  0.19317484  0.20851641]
-average:  0.209599870745
-Hierarchical  clustering scores:
-  [ 0.36399562  0.33322342  0.26887914  0.26766553  0.27899334  0.31080009]
-average:  0.30392619066
-
-Number of observations:  2000
-GMM  clustering scores:
-  [ 0.25488833  0.26719213  0.27004753  0.29166158  0.24451473  0.25325562]
-average:  0.263593320227
-Hierarchical  clustering scores:
-  [ 0.30832305  0.27720178  0.32128936  0.30795965  0.34018648  0.30774397]
-average:  0.310450713628
-
-Number of observations:  3000
-GMM  clustering scores:
-  [ 0.28065598  0.27760633  0.29537174  0.27481416  0.31893874  0.32182294]
-average:  0.294868312681
-Hierarchical  clustering scores:
-  [ 0.30905453  0.33557732  0.34563783  0.28443099  0.34758371  0.37462501]
-average:  0.332818230916
+Reaserch has shown that Hierarchical clustering performs better for our data
+than GMM and also that both methods have better scores while having more data.
+However it was impossible for performance reasons to run this methods on more
+than 3000 records of our data, where results would be even better. It is
+visualized in the figure \ref{fig:scores}
+\begin{figure}[!tbh]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/scores}
+  \caption{GMM vs Hierarchical clustering quality}
+  \label{fig:scores}
+\end{figure}
